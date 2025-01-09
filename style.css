@@ -194,6 +194,14 @@ h3{
   font-style: italic !important;
 }
 
+.paper-links{ 
+  position : relative; 
+  top : 15px }
+  
+.paper-links a { 
+  margin-right : 20px; }
+
+
 a {
   color: #002db3;
 }
