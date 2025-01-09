@@ -197,9 +197,9 @@ h3{
 .paper-links{ 
   position : relative; 
   top : 15px }
-  
+
 .paper-links a { 
-  margin-right : 20px; }
+  margin-right : 5%; }
 
 
 a {
