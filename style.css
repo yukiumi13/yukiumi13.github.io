@@ -9,6 +9,8 @@
 body{
     font-family: Palatino Linotype, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 13pt;
+    margin-top: 0%;
+    padding-top: 0%;
 }
 .profile-section{
     background: #f7f7f7;
