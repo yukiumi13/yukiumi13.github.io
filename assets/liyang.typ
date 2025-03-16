@@ -29,6 +29,10 @@ grid(
 #let phone = ""
 #let personal-site = "yukiumi13.github.io"
 
+#set page(
+  footer:align(center, text(size:7pt,[Updated in Mar. 2025 | Copyright © Yang Li]))
+)
+
 
 #show: resume.with(
   author: name,
@@ -47,7 +51,6 @@ grid(
   author-position: center,
   personal-info-position: center,
 )
-
 /*
 * Lines that start with == are formatted into section headings
 * You can use the specific formatting functions if needed
@@ -87,7 +90,7 @@ grid(
   company: "Research Intern",
   dates: dates-helper(start-date: "Mar 2025", end-date: "Present"),
 )
-- Doing research on *Large Generative 3D Models*.
+- Doing research on *Large Generative 3D Models*. We are developing a universal 3D asset generation framework designed to seamlessly integrate with the down-streaming game development pipeline.
 - Mentor: Dr. Zeyu Hu and Dr. Runze Zhang
 
 
@@ -97,7 +100,7 @@ grid(
   company: "Research Intern",
   dates: dates-helper(start-date: "Jun 2024", end-date: "Feb 2025"),
 )
-- Doing research on *Neural 3D Representation from Unposed Videos*. We proposed some online generalizable 3DGS reconstruction methods for unposed image streams, which progressively transform videos to 3D Gaussian streams within seconds.
+- Doing research on *Neural 3D Representation from Unposed Videos*. We proposed some online generalizable 3DGS reconstruction methods for monocular videos, which transform videos to 3D Gaussians within seconds.
 - Mentor: Dr. Jinglu Wang and Dr. Xiao Li
 
 #work(
@@ -219,4 +222,3 @@ grid(
 - Jiangbo Lu, Co-founder & CTO, SmartMore Corporation
 - Yongwei WU _IEEE Fellow_, Professor, Vice Head, Department of Computer Science and Technology, Tsinghua University
 - Yingcong Chen, Assistant Professor, AI Thrust, HKUST, GZ; Assistant Professor, Department of Computer Science & Engineering, HKUST, CWB
-
