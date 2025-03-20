@@ -72,7 +72,7 @@ grid(
   dates: dates-helper(start-date: "Aug 2022", end-date: "Oct 2024"),
   degree: "Master of Philosophy, Artificial Intelligence",
 )
-- Supervisor: Dr. #link("yingcong.me")[Ying-Cong Chen], co-supervised by Dr. #link("danxurgb.net")[Dan Xu] (Clear Water Bay), and Dr. Yongwei Wu (Tsinghua University)
+- Supervisor: Dr. #link("https://yingcong.me")[Ying-Cong Chen], co-supervised by Dr. #link("https://danxurgb.net")[Dan Xu] (Clear Water Bay), and Dr. Yongwei Wu (Tsinghua University)
 - Thesis: Neural 3D Reconstruction of Reflective Objects
 
 #edu(
