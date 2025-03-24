@@ -67,12 +67,12 @@ grid(
 == Education
 
 #edu(
-  institution: "Hong Kong University of Science and Technology",
+  institution: "Hong Kong University of Science and Technology, Guangzhou",
   location: "Guangzhou, CN",
   dates: dates-helper(start-date: "Aug 2022", end-date: "Oct 2024"),
   degree: "Master of Philosophy, Artificial Intelligence",
 )
-- Supervisor: Dr. #link("https://yingcong.me")[Ying-Cong Chen], co-supervised by Dr. #link("https://danxurgb.net")[Dan Xu] (Clear Water Bay), and Dr. Yongwei Wu (Tsinghua University)
+- Supervisor: Dr. #link("https://yingcong.me")[Ying-Cong Chen], co-supervised by Dr. #link("https://danxurgb.net")[Dan Xu] (Clear Water Bay)
 - Thesis: Neural 3D Reconstruction of Reflective Objects
 
 #edu(
@@ -85,13 +85,13 @@ grid(
 == Work Experience
 
 #work(
-  title: "LightSpeed Studios, IEG Group, Tencent",
+  title: "LightSpeed Studios, Tencent",
   location: "Shenzhen, CN",
   company: "Research Intern",
   dates: dates-helper(start-date: "Mar 2025", end-date: "Present"),
 )
 - Doing research on *Large Generative 3D Models*. We are developing a universal 3D asset generation framework designed to seamlessly integrate with the down-streaming game development pipeline.
-- Mentor: Dr. Zeyu Hu and Dr. Runze Zhang
+- Mentor: Dr. #link("https://hzykent.github.io/")[Zeyu Hu] and Dr. #link("https://scholar.google.com.hk/citations?user=o41-Nj8AAAAJ&hl=zh-CN&oi=ao")[Runze Zhang]
 
 
 #work(
@@ -101,7 +101,7 @@ grid(
   dates: dates-helper(start-date: "Jun 2024", end-date: "Feb 2025"),
 )
 - Doing research on *Neural 3D Representation from Unposed Videos*. We proposed some online generalizable 3DGS reconstruction methods for monocular videos, which transform videos to 3D Gaussians within seconds.
-- Mentor: Dr. Jinglu Wang and Dr. Xiao Li
+- Mentor: Dr. #link("https://www.microsoft.com/en-us/research/people/jinglwa/")[Jinglu Wang] and Dr. #link("https://pableeto.netlify.app/")[Xiao Li]
 
 #work(
   title: "Optical Imaging Research Group, SmartMore",
@@ -110,7 +110,7 @@ grid(
   dates: dates-helper(start-date: "Jun 2022", end-date: "May 2024"),
 )
 - Doing research on *Neural 3D Reconstruction with Polarization Cues*. We developed a low-cost and accurate multi-view 3D reconstruction pipeline dedicated for reflective objects with physics information.
-- Mentor: Dr. Jiangbo Lu and Dr. Nianjuan Jiang
+- Mentor: Dr. #link("https://sites.google.com/site/jiangbolu/")[Jiangbo Lu] and Dr. #link("https://scholar.google.com/citations?user=rW2bJ-UAAAAJ&hl=en")[Nianjuan Jiang]
 
 #work(
   title: "BME AI Lab, SYSU",
@@ -130,7 +130,8 @@ grid(
   title: "UVRM: A Scalable 3D Reconstruction Model from Unposed Videos",
   authors: [Shiu-hong Kao, Xiao Li, Jinglu Wang, *Yang Li*, Chi-Keung Tang, Yu-Wing Tai, Yan Lu],
   venue: "arXiv:2501.09347",
-  year: 2025
+  year: 2025,
+  note: link("https://cse.hkust.edu.hk/~skao/src/uvrm_demo.mp4")[demo]
 )
 
 #publication(
@@ -146,7 +147,8 @@ grid(
   title: "SEED-Story: Multimodal Long Story Generation with Large Language Model",
   authors: [Shuai Yang, Yuying Ge, *Yang Li*, Yukang Chen, Yixiao Ge, Ying Shan, Yingcong Chen],
   venue: "arXiv:2407.08683",
-  year: 2024
+  year: 2024,
+  note: link("https://github.com/TencentARC/SEED-Story")[code]
 )
 
 === Peer-reviewed
@@ -155,7 +157,8 @@ grid(
   title: "GNeRP: Gaussian guided Neural Reconstruction of Reflective Objects with Noisy Polarization Priors",
   authors: [*Yang Li*, Ruizheng Wu, Jiyong Li, Yingcong Chen],
   venue: "International Conference on Learning Representations (ICLR)",
-  year: 2024
+  year: 2024,
+  note: link("https://yukiumi13.github.io/gnerp_page/")[project page]
 )
 
 #publication(
