@@ -218,7 +218,4 @@ grid(
 // )
 == Skills
 - *Programming Languages*: Python, PyTorch, TensorFlow, MATLAB
-== References
-- Jiangbo Lu, Co-founder & CTO, SmartMore Corporation
-- Yongwei WU _IEEE Fellow_, Professor, Vice Head, Department of Computer Science and Technology, Tsinghua University
-- Yingcong Chen, Assistant Professor, AI Thrust, HKUST, GZ; Assistant Professor, Department of Computer Science & Engineering, HKUST, CWB
+
