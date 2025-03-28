@@ -91,7 +91,7 @@ grid(
   dates: dates-helper(start-date: "Mar 2025", end-date: "Present"),
 )
 - Doing research on *Large Generative 3D Models*. We are developing a universal 3D asset generation framework designed to seamlessly integrate with the down-streaming game development pipeline.
-- Mentor: Dr. #link("https://hzykent.github.io/")[Zeyu Hu] and Dr. #link("https://scholar.google.com.hk/citations?user=o41-Nj8AAAAJ&hl=zh-CN&oi=ao")[Runze Zhang]
+- Mentor: Dr. #link("https://hzykent.github.io/")[Zeyu Hu] and Dr. #link("hhttps://johann.wang/")[Yuhan Wang]
 
 
 #work(
