@@ -178,10 +178,14 @@ grid(
 )
 
 == Awards
+#awards(name: "Ph.D. Fellowship",
+              date: 2025,
+              issuer: "Department of Computer Science, Dartmouth College",
+              url: "",)
 
 #awards(name: "Ph.D. Fellowship",
               date: 2025,
-              issuer: "Rutgers University–New Brunswick",
+              issuer: "Department of Computer Science, Rutgers University–New Brunswick",
               url: "",)
 
 #awards(name: "Star of Tomorrow Award",
