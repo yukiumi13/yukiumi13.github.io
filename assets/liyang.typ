@@ -135,10 +135,10 @@ grid(
 )
 
 #publication(
-  tag: "Arxiv '25",
+  tag: "ICCV '25",
   title: "StreamGS: Online Generalizable Gaussian Splatting Reconstruction for Unposed Image Streams",
   authors: [*Yang Li*, Jinglu Wang, Lei Chu, Xiao Li, Shiu-hong Kao, Ying-Cong Chen, Yan Lu],
-  venue: "arXiv:2503.06235",
+  venue: "International Conference on Computer Vision (ICCV)",
   year: 2025
 )
 
