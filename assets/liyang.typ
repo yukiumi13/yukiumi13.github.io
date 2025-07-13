@@ -134,6 +134,7 @@ grid(
   note: link("https://cse.hkust.edu.hk/~skao/src/uvrm_demo.mp4")[demo]
 )
 
+=== Peer-reviewed
 #publication(
   tag: "ICCV '25",
   title: "StreamGS: Online Generalizable Gaussian Splatting Reconstruction for Unposed Image Streams",
@@ -143,15 +144,14 @@ grid(
 )
 
 #publication(
-  tag: "Arxiv '24",
+  tag: "HiGen '25",
   title: "SEED-Story: Multimodal Long Story Generation with Large Language Model",
   authors: [Shuai Yang, Yuying Ge, *Yang Li*, Yukang Chen, Yixiao Ge, Ying Shan, Yingcong Chen],
-  venue: "arXiv:2407.08683",
-  year: 2024,
+  venue: "Workshop on Human-Interactive Generation and Editing, International Conference on Computer Vision (ICCV)",
+  year: 2025,
   note: link("https://github.com/TencentARC/SEED-Story")[code]
 )
 
-=== Peer-reviewed
 #publication(
   tag: "ICLR '24",
   title: "GNeRP: Gaussian guided Neural Reconstruction of Reflective Objects with Noisy Polarization Priors",
