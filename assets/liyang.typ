@@ -144,10 +144,10 @@ grid(
 )
 
 #publication(
-  tag: "HiGen '25",
+  tag: "HiGen '25 Oral",
   title: "SEED-Story: Multimodal Long Story Generation with Large Language Model",
   authors: [Shuai Yang, Yuying Ge, *Yang Li*, Yukang Chen, Yixiao Ge, Ying Shan, Yingcong Chen],
-  venue: "Workshop on Human-Interactive Generation and Editing, International Conference on Computer Vision (ICCV)",
+  venue: [*Oral*, Workshop on Human-Interactive Generation and Editing, International Conference on Computer Vision (ICCV)],
   year: 2025,
   note: link("https://github.com/TencentARC/SEED-Story")[code]
 )
