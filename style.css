@@ -272,3 +272,10 @@ a:hover{
     padding: 3px 6px 4px 6px;
   }
 }
+
+
+.highlight-name {
+    color: rgb(204, 153, 0);
+    /* 您还可以在这里添加其他样式，比如加粗： */
+    /* font-weight: bold; */
+  }
