@@ -7,7 +7,7 @@
  */
 
 body{
-    font-family: "Noto Serif", "Times New Roman", Times, serif;
+    font-family: "Exo 2", "Times New Roman", Times, serif;
     font-size: 13pt;
     margin-top: 0%;
     padding-top: 0%;
@@ -244,7 +244,7 @@ a:hover{
   letter-spacing: .5px;
   box-shadow: 0 1px 3px rgba(0,0,0,.25);
   pointer-events: none;         /* 避免遮挡点击 */
-  font-family: "Noto Serif", "Times New Roman", Times, serif;
+  font-family: "Exo 2", "Times New Roman", Times, serif;
 
 }
 
@@ -262,7 +262,7 @@ a:hover{
   letter-spacing: .5px;
   box-shadow: 0 1px 3px rgba(0,0,0,.25);
   pointer-events: none;         /* 避免遮挡点击 */
-  font-family: "Noto Serif", "Times New Roman", Times, serif;
+  font-family: "Exo 2", "Times New Roman", Times, serif;
 }
 
 .teaser-badge-arxiv {
@@ -279,7 +279,7 @@ a:hover{
   letter-spacing: .5px;
   box-shadow: 0 1px 3px rgba(0,0,0,.25);
   pointer-events: none;
-  font-family: "Noto Serif", "Times New Roman", Times, serif;
+  font-family: "Exo 2", "Times New Roman", Times, serif;
 }
 
 @media (max-width: 500px) {
