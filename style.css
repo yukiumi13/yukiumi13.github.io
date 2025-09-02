@@ -269,8 +269,8 @@ a:hover{
   position: absolute;
   top: 0;
   left: 0;
-  color: #FFFFFF;                         /* arXiv 白色文字 */
-  background-color: #b31b1b;              /* arXiv 红色背景 (Cornell Red) */
+  color: rgb(255, 255, 255);                         /* arXiv 白色文字 */
+  background-color: rgb(179, 27, 27);              /* arXiv 红色背景 (Cornell Red) */
   font-size: 1rem;
   font-weight: 600;
   padding: 4px 8px 5px 8px;
