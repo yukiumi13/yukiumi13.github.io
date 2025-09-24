@@ -283,8 +283,10 @@ a:hover{
 }
 
 @media (max-width: 500px) {
-  .teaser-badge {
-    font-size: 0.6rem;
+  .teaser-badge,
+  .teaser-badge-highlight,
+  .teaser-badge-arxiv {
+    font-size: 1.0rem;
     padding: 3px 6px 4px 6px;
   }
 }
