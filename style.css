@@ -297,3 +297,11 @@ a:hover{
     /* 您还可以在这里添加其他样式，比如加粗： */
     /* font-weight: bold; */
   }
+
+.photo-caption {
+    width: 70%;
+    margin: 0 auto;
+    font-style: italic;
+    color: grey;
+    text-align: center;
+}
