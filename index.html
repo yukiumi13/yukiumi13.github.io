@@ -11,6 +11,7 @@
     <link href="./materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./aos.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <style type="text/css">
         body {
@@ -31,11 +32,9 @@
             vertical-align: middle;
             text-align: left;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             padding: 20px;
             margin: 20px auto;
-            margin-top: 0%;
-            padding-top: 0%;
         }
         .content {
             margin-bottom: -10px;
@@ -60,466 +59,560 @@
         .publication strong { font-size: 17px; color : var(--ustblue); }
         .publication .links { position : relative; top : 15px }
         .publication .links a { margin-right : 20px; }
+
+        .navbar-container {
+            margin: 0 auto;
+        }
+
+        .nav-wrapper ul li a.nav-item {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        @media (min-width: 993px) {
+          .nav-wrapper.container.navbar-container {
+            padding-left: 350px;
+          }
+        }
+
+        /* Styles for the new two-column layout */
+        .page-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px; /* Space between columns */
+        }
+
+        .sidebar {
+          width: 300px; /* Fixed width for the sidebar */
+          flex-shrink: 0; /* Prevent sidebar from shrinking */
+          position: sticky;
+          top: 20px; /* Adjust sticky top position */
+          align-self: flex-start; /* Align to the top of the container */
+          text-align: left;
+        }
+
+        .sidebar .image-container img {
+            border-radius: 8px; /* Optional: rounded corners for the image */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sidebar .photo-caption {
+            text-align: center;
+        }
+
+        .main-content {
+          flex: 1; /* Take up the remaining space */
+          min-width: 0; /* Prevent overflow issues in flex items */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 992px) {
+          .page-wrapper {
+            flex-direction: column; /* Stack columns vertically */
+          }
+          .sidebar {
+            width: 100%; /* Sidebar takes full width */
+            position: static; /* Disable sticky positioning */
+            text-align: center; /* Center align content in sidebar */
+          }
+          .sidebar .image-container {
+            max-width: 400px;
+            margin: 0 auto; /* Center the image container */
+          }
+        }
+
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .sidebar-links li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-links a {
+            display: flex;
+            align-items: center;
+            color: var(--ustlightyellow);
+            text-decoration: none;
+        }
+
+        .sidebar-links i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+
     </style>
     <title>Yang (Marino) LI's Homepage</title>
     <!-- <link rel="icon" href="../content/images/icon.png"> -->
   </head>
 
   <body>
-    <div class="navbar-fixed">
-      <nav class="white">
-        <div class="nav-wrapper container"><a id="logo-container" href="https://yukiumi13.github.io/#" class=""></a>
-          <ul class="left">
-            <li><a class="nav-item waves-effect waves-light active" href="#home">Home</a></li>
-            <li><a class="nav-item waves-effect waves-light" href="#publications">Research</a></li>
-            <li><a class="nav-item waves-effect waves-light" href="#experiences">Experiences</a></li>
-            <li><a class="nav-item waves-effect waves-light" href="./assets/liyang.pdf">CV</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav class="white">
+      <div class="nav-wrapper container navbar-container"><a id="logo-container" href="https://yukiumi13.github.io/#" class=""></a>
+        <ul class="left nav-links">
+          <li><a class="nav-item waves-effect waves-light active" href="#home">Home</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#publications">Research</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#experiences">Experiences</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="./assets/liyang.pdf">CV</a></li>
+        </ul>
+      </div>
+    </nav>
 
 
     <div class="container">
 
-        <table width="100%" align="center" border="0">
-        <tr>
-            <td id = "home" width="60%" valign="middle">
-                <h1 style="margin-top:18px;margin-bottom:36px;color:var(--ustyellow);font-weight:lighter;">Yang <i>(Marino)</i> LI</h1>
-                <p style="font-size:18px; ">
-                  <b>PhD Student</b> <br />
-                    Department of Computer Science, <br />
-                    Rutgers - New Brunswick, <br />
-                   NJ, US. <br />
-                    <br /><br />
-                    Email: <br /> yang.marino.li [at] gmail [dot] com  <br /> 
-                <p>
-                    <a style="color:var(--ustlightyellow)" href="assets/liyang.pdf">[Curriculum Vitae]</a> &nbsp;
-                    <a style="color:var(--ustlightyellow)" href="assets/research_statement.pdf">[Research Statement]</a> &nbsp;
-                    <a style="color:var(--ustlightyellow)" href="https://scholar.google.com/citations?user=kqrSHAYAAAAJ&hl=zh-CN">[Google Scholar]</a> &nbsp;
-                    <a style="color:var(--ustlightyellow)" href="https://github.com/yukiumi13">[GitHub]</a> &nbsp;
-                </p>
-            </td>
-            <td width="40%" align="center">
-                <div class="image-container">
-                    <img src="images/sunset.jpeg" />
-                    <p class="photo-caption">Shot while chasing the sunset on Maui Island, HI</p>
+        <div class="page-wrapper">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <div class="image-container">
+                        <img src="images/sunset.jpeg" alt="Profile Photo" />
+                        <p class="photo-caption">Shot while chasing the sunset on Maui Island, HI</p>
+                    </div>
+                    <h1 style="margin-top:18px;margin-bottom:18px;color:var(--ustyellow);font-weight:lighter; font-size: 1.8rem;">Yang <i>(Marino)</i> LI</h1>
+                    <p style="font-size:16px; ">
+                        <b>PhD Student</b> <br />
+                        Department of Computer Science, <br />
+                        Rutgers - New Brunswick, <br />
+                        NJ, US. <br />
+                        <br />
+                        Email: <br /> yang.marino.li [at] gmail [dot] com <br />
+                    </p>
+                    <ul class="sidebar-links">
+                        <li><a href="assets/liyang.pdf"><i class="fa-solid fa-file-pdf"></i>Curriculum Vitae</a></li>
+                        <li><a href="assets/research_statement.pdf"><i class="fa-solid fa-book"></i>Research Statement</a></li>
+                        <li><a href="https://scholar.google.com/citations?user=kqrSHAYAAAAJ&hl=zh-CN"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a></li>
+                        <li><a href="https://github.com/yukiumi13"><i class="fa-brands fa-github"></i>GitHub</a></li>
+                    </ul>
                 </div>
-            </td>
-        </tr>
-        </table>
+            </aside>
 
-<h2 id="biography" style="color:var(--ustyellow)">Biography</h2>
-<hr style="margin-top:-16px;margin-bottom:10px;" />
+            <!-- Right Main Content -->
+            <main class="main-content">
+                <h2 id="biography" style="color:var(--ustyellow)">Biography</h2>
+                <hr style="margin-top:-16px;margin-bottom:10px;" />
 
-<p>I am a first-year PhD student at Rutgers University - New Brunswick. Fortunate to be advised by Prof. Chengzhi Mao, I am dedicated to bringing 3D Vision to the next stage, empowering it with spatial intelligence through Visual Language Models.
-<p>I have been working on Generative AI for 3D Vision, involving generation, inverse rendering, and geometric reconstruction problems. I had wonderful experiences during my internships at LightSpeed Studio Tencent, Microsoft Research Asia, and SmartMore. It has been my honor to collaborate with talented researchers at these institutions, including <a style="color: var(--ustlightyellow);" href="https://johann.wang/"> Yuhan Wang </a>, <a style="color: var(--ustlightyellow)"  href="https://jinnan-chen.github.io/">Jinnan Chen</a>, <a style="color:var(--ustlightyellow)" href="https://www.microsoft.com/en-us/research/people/jinglwa/">Jinglu Wang</a>, <a href="https://pableeto.netlify.app/" style="color:var(--ustlightyellow)">Xiao Li </a>, <a style="color: var(--ustlightyellow);" href="https://andysonys.github.io/"> Shuai Yang</a> and <a style="color:var(--ustlightyellow)" href="https://sites.google.com/site/jiangbolu/">Jiangbo Lu</a>.</p>
-Previously, I received my M.Phil. degree in Artificial Intelligence from HKUST, under the supervision of <a style="color:var(--ustlightyellow)" href="https://www.yingcong.me/">Prof. Yingcong Chen</a> and <a style="color:var(--ustlightyellow)" href="https://www.danxurgb.net/">Prof. Dan Xu</a> and obtained my B.S. degree in Mathematics from SYSU.</p>
-<!-- <p style="color:rgb(247, 13, 29)"><strong><i>(I am looking for researcher or postdoc positions in 2024 fall! Reach out to me if you’re intersted!)</i></strong></p> -->
+                <p>I am a first-year PhD student at Rutgers University - New Brunswick. Fortunate to be advised by Prof. Chengzhi Mao, I am dedicated to bringing 3D Vision to the next stage, empowering it with spatial intelligence through Visual Language Models.
+                <p>I have been working on Generative AI for 3D Vision, involving generation, inverse rendering, and geometric reconstruction problems. I had wonderful experiences during my internships at LightSpeed Studio Tencent, Microsoft Research Asia, and SmartMore. It has been my honor to collaborate with talented researchers at these institutions, including <a style="color: var(--ustlightyellow);" href="https://johann.wang/"> Yuhan Wang </a>, <a style="color: var(--ustlightyellow)"  href="https://jinnan-chen.github.io/">Jinnan Chen</a>, <a style="color:var(--ustlightyellow)" href="https://www.microsoft.com/en-us/research/people/jinglwa/">Jinglu Wang</a>, <a href="https://pableeto.netlify.app/" style="color:var(--ustlightyellow)">Xiao Li </a>, <a style="color: var(--ustlightyellow);" href="https://andysonys.github.io/"> Shuai Yang</a> and <a style="color:var(--ustlightyellow)" href="https://sites.google.com/site/jiangbolu/">Jiangbo Lu</a>.</p>
+                Previously, I received my M.Phil. degree in Artificial Intelligence from HKUST, under the supervision of <a style="color:var(--ustlightyellow)" href="https://www.yingcong.me/">Prof. Yingcong Chen</a> and <a style="color:var(--ustlightyellow)" href="https://www.danxurgb.net/">Prof. Dan Xu</a> and obtained my B.S. degree in Mathematics from SYSU.</p>
+                <!-- <p style="color:rgb(247, 13, 29)"><strong><i>(I am looking for researcher or postdoc positions in 2024 fall! Reach out to me if you’re intersted!)</i></strong></p> -->
 
-<!--<h2 id="news" style="color:rgb(59, 103, 236)">News</h2>-->
-<!--<hr style="margin-top:-16px;margin-bottom:10px;" />-->
+                <!--<h2 id="news" style="color:rgb(59, 103, 236)">News</h2>-->
+                <!--<hr style="margin-top:-16px;margin-bottom:10px;" />-->
 
-<!--<ul>-->
-<!--  <li>[2024/07] V-IRL was accepted by ECCV 2024</li>-->
-<!--  <li>[2024/05] Lowis3D was accepted by T-PAMI</li>-->
-<!--  <li>[2024/02] RegionPLC was accepted by CVPR 2024.</li>-->
-<!--  <li>[2023/02] PLA was accepted by CVPR 2023.</li>-->
-<!--  <li>[2022/09] ST3D++ was accepted by T-PAMI.</li>-->
-<!--  <li>[2022/09] SparseKD was accepted by NeurIPS 2022.</li>-->
-<!--  <li>[2023/07] DODA was accepted by ECCV 2022.</li>-->
-<!--</ul>-->
+                <!--<ul>-->
+                <!--  <li>[2024/07] V-IRL was accepted by ECCV 2024</li>-->
+                <!--  <li>[2024/05] Lowis3D was accepted by T-PAMI</li>-->
+                <!--  <li>[2024/02] RegionPLC was accepted by CVPR 2024.</li>-->
+                <!--  <li>[2023/02] PLA was accepted by CVPR 2023.</li>-->
+                <!--  <li>[2022/09] ST3D++ was accepted by T-PAMI.</li>-->
+                <!--  <li>[2022/09] SparseKD was accepted by NeurIPS 2022.</li>-->
+                <!--  <li>[2023/07] DODA was accepted by ECCV 2022.</li>-->
+                <!--</ul>-->
 
-<script type="text/javascript">
-    function hideshow(which){
-    if (!document.getElementById)
-        return
-    if (which.style.display=="block")
-        which.style.display="none"
-    else
-        which.style.display="block"
-    }
-</script>
+                <script type="text/javascript">
+                    function hideshow(which){
+                    if (!document.getElementById)
+                        return
+                    if (which.style.display=="block")
+                        which.style.display="none"
+                    else
+                        which.style.display="block"
+                    }
+                </script>
 
-<div id="news">
+                <div id="news">
 
-  <div class="row container">
-    <div class="row">
-      <h2 id="about-me" style="color:var(--ustyellow)">🔥News</h2>
-      <hr style="margin-top:-16px;margin-bottom:10px;" />
+                  <div class="row container">
+                    <div class="row">
+                      <h2 id="about-me" style="color:var(--ustyellow)">🔥News</h2>
+                      <hr style="margin-top:-16px;margin-bottom:10px;" />
+                    </div>
+                    <div class="row" style="padding-left: 1.5%;">
+                      <ul>
+                        <li data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true" class="aos-init aos-animate">
+                          • <b>2025.3:</b>&nbsp I start my research intern at Tencent LIGHTSPEED STUDIOS, working on Large 3D Models. Collabrations are highly welcomed.
+                        </li>
+                        <li data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true" class="aos-init aos-animate">
+                          • <b>2024.12:</b>&nbsp I am looking for PhD position in 2025. Please <a style="color:var(--ustyellow)" href="mailto:liyangaftermath@gmail.com"> contact me </a> if you are interested.
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!--<h2 id="codebase" style="color:rgb(59, 103, 236)">Codebase</h2>-->
+                <!--<hr style="margin-top:-16px;margin-bottom:10px;" />-->
+
+                <!--<table class="">-->
+                <!--<tr>-->
+                <!--    <td width="30%" valign="top">-->
+                <!--        <img src="content/images/pcdet_min.png" width="96%" height="100" />-->
+                <!--    </td>-->
+                <!--    <td width="70%" valign="top">-->
+                <!--        <div style="margin-top:0px;margin-bottom:0px;">-->
+                <!--        <a href="https://github.com/open-mmlab/OpenPCDet" style="">-->
+                <!--            OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Cloud-->
+                <!--        </a>-->
+                <!--        <br>-->
+                <!--        <br />-->
+                <!--        <font color="#000000">OpenPCDet Development Team</font> <strong style="color:rgb(247, 13, 29)">(Core developer)</strong>-->
+                <!--        <br />-->
+                <!--        <font style="font-size:15px;"><em>-->
+                <!--      &lt;!&ndash;       arXiv:1912.13192, Technical Report, 2019-->
+                <!--            </em>  &ndash;&gt;-->
+                <!--            June 2020-->
+                <!--            </em>-->
+                <!--        </font>-->
+                <!--        <br>-->
+                <!--        <br />-->
+                <!--        <a href="https://github.com/open-mmlab/OpenPCDet" style="">[CODE]</a> &nbsp;-->
+                <!--            <a href="javascript:hideshow(document.getElementById('OpenPCDet'))"> [Bibtex] </a> &nbsp;-->
+                <!--            <a href="https://github.com/open-mmlab/OpenPCDet"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/open-mmlab/OpenPCDet?style=social" /> </a>-->
+                <!--        <br />-->
+                <!--        </div>-->
+                <!--    </td>-->
+                <!--</tr>-->
+                <!--</table>-->
+                <!-- <pre><p id="OpenPCDet" style="font:18px; display:none">
+                @inproceedings{shi2020pcdet,
+                  title={OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Cloud},
+                  author={Shi, Shaoshuai and Guo, Chaoxu and Li, Hongsheng},
+                  Journal ={https://github.com/open-mmlab/OpenPCDet},
+                  year={2020}
+                }
+                </p></pre> -->
+                <!--<pre><p id="OpenPCDet" style="font:18px; display:none">-->
+                <!--@misc{openpcdet2020,-->
+                <!--    title={OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Clouds},-->
+                <!--    author={OpenPCDet Development Team},-->
+                <!--    howpublished = {\url{https://github.com/open-mmlab/OpenPCDet}},-->
+                <!--    year={2020}-->
+                <!--}-->
+                <!--</p></pre>-->
+
+                <h2 id="experiences" style="color:var(--ustyellow)">Experience</h2>
+                <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+                <ul style="font-size: 14px">
+                <!--  <li style="margin-bottom: 10px">-->
+                <!--    <span><strong>Brown University</strong></span>-->
+                <!--    <div style="float: right;">Aug. 2020 - Nov. 2020</div>-->
+                <!--    <br clear="all">-->
+                <!--    <span>M.Sc. Program in Computer Science.</span>-->
+                <!--  </li>-->
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <img class="responsive-img" src="images/tencent_lightspeed.png" width="250">
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"><a href="https://www.lightspeed-studios.com/r&d-capabilities.html" style="color: var(--ustblue)">Tencent IEG</a></div>
+                      <div class="paper-author">LightSpeed Studios Research, working on Large 3D Models</div>
+                      <div class="paper-conf"><em><b> Internship</b>: Mar 2025 - Current</em></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <img class="responsive-img" src="images/msra-fig.png" width="250">
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/" style="color: var(--ustblue)">Microsoft Research Asia</a></div>
+                      <div class="paper-author">Media Computing Group, working on Generalizable 3D Gaussian Splatting</div>
+                      <div class="paper-conf"><em><b> <a style="color:var(--ustyellow)">Stars of Tomorrow</a> Internship</b>: Jun 2024 - Feb 2025</em></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <img class="responsive-img" src="images/smartmore-logo.png" width="250">
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"> <a href="https://alum.hkust.edu.hk/alumni-stories/alumni-kaleidoscope/3590/jiaya_jia" style="color: var(--ustblue)">SmartMore</a></div>
+                      <div class="paper-author"> Optical Imaging Research Group, working on Neural 3D Reconstruction</div>
+                      <div class="paper-conf"><em><b>Internship</b>: Jun 2022 - May 2024</em></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <img class="responsive-img" src="images/sysu.jpg" width="250">
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title">Sun Yat-sen University</div>
+                      <div class="paper-author">AI Lab, working on Biomedical Image Analysis</div>
+                      <div class="paper-conf"><em><b>Internship</b>: Mar 2021 - Nov 2021</em></div>
+                  </div>
+                </div>
+
+
+                </ul>
+
+                <h2 id="publications" style="color:var(--ustyellow)">Publications <a style="color:var(--ustlightyellow)" href="https://scholar.google.com/citations?user=kqrSHAYAAAAJ&hl=zh-CN">[Google Scholar]</a></h2>
+                <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+                <p>*: Equal Contribution</p>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate"
+                      data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine"
+                      data-aos-duration="500" data-aos-once="true">
+
+                    <div class="teaser-wrapper">
+                      <div class="teaser-badge-arxiv">Arxiv 2025</div>
+                    
+                      <video class="responsive-img teaser-media"
+                            style="width:100%; aspect-ratio: 1/0.618; resize: both;"
+                            autoplay loop muted playsinline>
+                        <source src="images/uvrm_teaser.mp4" type="video/mp4">
+                      </video>
+                    </div>
+
+                  </div>
+
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"><i>UVRM</i>: A Scalable 3D Reconstruction Model from Unposed Videos</div>
+                      <div class="paper-author"> Shiu-hong Kao, Xiao Li, Jinglu Wang, <span class="highlight-name">Yang Li</span>, Chi-Keung Tang, Yu-Wing Tai, Yan Lu.</div>
+                      <div class="paper-conf"><em>Arxiv Preprint. 2025</em></div>
+                      <div class = "paper-links"> 
+                        <a href="http://arxiv.org/abs/2501.09347">[Paper]</a>
+                        <a href="https://cse.hkust.edu.hk/~skao/src/uvrm_demo.mp4">[Demo]</a>
+                      </div>
+                  </div>
+                </div>
+
+
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                    
+                    <div class="teaser-wrapper">
+                      <div class="teaser-badge">ICCV 2025</div>
+                        <video class="responsive-img" style="width: 100%; aspect-ratio: 1/0.618; resize: both;" autoplay loop muted>
+                          <source src="images/streamgs_demo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"><i>StreamGS</i>: Online Generalizable Gaussian Splatting Reconstruction for Unposed Image Streams</div>
+                      <div class="paper-author"> <span class="highlight-name">Yang Li</span>, Jinglu Wang, Lei Chu, Xiao Li, Shiu-Hong Kao, Yingcong Chen, Yan Lu.</div>
+                      <div class="paper-conf"><em>International Conference on Computer Vision (ICCV). 2025</em></div>
+                      <div class = "paper-links"> 
+                        <a href="https://arxiv.org/abs/2503.06235">[Paper]</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      
+                    <div class="teaser-wrapper">
+                      <div class="teaser-badge-highlight">ICCVW 2025 Oral</div>
+                        <img class="responsive-img" src="images/seed_story_teaser.jpg" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
+                  
+                      </div>
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"><i>SEED-Story</i>: Multimodal Long Story Generation with Large Language Model</div>
+                      <div class="paper-author"> Shuai Yang, Yuying Ge, <span class="highlight-name">Yang Li</span>, Yukang Chen, Yixiao Ge, Ying Shan, Yingcong Chen.</div>
+                      <div class="paper-conf"><em><b>Oral</b>, 1st Workshop on Human-Interactive Generation and Editing, International Conference on Computer Vision (ICCV). 2025</em></div>
+                      <div class = "paper-links"> 
+                        <a href="https://arxiv.org/abs/2407.08683">[Paper]</a>
+                        <a href="https://huggingface.co/TencentARC/SEED-Story">[Model]</a>
+                        <a href="https://huggingface.co/datasets/TencentARC/StoryStream">[Data]</a>
+                        <a href="https://github.com/TencentARC/SEED-Story">[Code]</a><a href="https://github.com/TencentARC/SEED-Story"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/TencentARC/SEED-Story?style=social" /> </a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      
+                  <div class="teaser-wrapper">
+                    <div class="teaser-badge">ICLR 2024</div>
+                    <img class="responsive-img" src="images/gnerp_teaser.png" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
+                    </div>
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"><i>GNeRP</i>:  Gaussian guided
+                        Neural Reconstruction of Reflective Objects with Noisy Polarization Priors
+                          </div>
+                      <div class="paper-author"> <span class="highlight-name">Yang Li</span>, Ruizheng Wu, Jiyong Li, Yingcong Chen.</div>
+                      <div class="paper-conf"><em>International Conference on Learning Representations (ICLR), 2024.</em></div>
+                      <div class = "paper-links"> 
+                        <a href="https://yukiumi13.github.io/gnerp_page/gnerp_camera_ready.pdf">[Paper]</a>
+                        <a href="https://yukiumi13.github.io/gnerp_page/gnerp_camera_ready.pdf">[Project Page]</a>
+                        <a href="https://drive.google.com/drive/folders/19j1Px5hT74dpZwKRgX0pfycr35AsbKgj">[Data]</a>
+                        <a href="https://github.com/yukiumi13/GNeRP">[Code]</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+
+                    <div class="teaser-wrapper">
+                      <div class="teaser-badge">AAAI 2024</div>
+                      <img class="responsive-img" src="images/ccls_teaser.png" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
+                    </div>
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title">Contrastive Continual Learning with Importance Sampling and Prototype-Instance Relation Distillation
+                          </div>
+                      <div class="paper-author"> Jiyong Li, Dilshod Azizov, <span class="highlight-name">Yang Li</span>, Shangsong Liang.</div>
+                      <div class="paper-conf"><em>Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024.</em></div>
+                      <div class = "paper-links"> 
+                        <a href="https://arxiv.org/pdf/2403.04599">[Paper]</a>
+                        <a href="https://github.com/lijy373/CCLIS">[Code]</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+
+                        <img class="responsive-img" src="images/dcnet_teaser.jpg" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
+                    
+                  </div>
+
+                  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
+                      <div class="paper-title"><i>DCNet</i>: Densely Connected Deep Convolutional Encoder Decoder Network for Nasopharyngeal Carcinoma Segmentation
+                          </div>
+                      <div class="paper-author"> <span class="highlight-name">Yang Li</span>, Guanghui Han,  Xiujian Liu.</div>
+                      <div class="paper-conf"><em>Sensors 2021, 21(23), 7877. </em></div>
+                      <div class = "paper-links"> 
+                        <a href="https://www.mdpi.com/1424-8220/21/23/7877">[Paper]</a>
+                        <a href="https://github.com/yukiumi13/DCNet">[Code]</a>
+                      </div>
+                  </div>
+                </div>
+
+                <h2 id="awards" style="color:var(--ustyellow)">Honors &amp; Awards</h2>
+                <hr style="margin-top:-16px;margin-bottom:10px;" />
+                <div style="padding-left: 2.5%;">
+                <table style="border-spacing:2px;" width="100%">
+                    <tbody>
+                    <tr>
+                        <td>PhD Scholarship in Computer Science, Rutgers University</td>
+                        <td style="text-align: right">2025</td>
+                    </tr>
+                    <tr>
+                        <td>PhD Scholarship in Computer Science, Dartmouth College</td>
+                        <td style="text-align: right">2025</td>
+                    </tr>
+                    <tr>
+                        <td>Stars of Tomorrow (Award of Excellent Intern), Microsoft Research Asia</td>
+                        <td style="text-align: right">2025</td>
+                    </tr>
+                    <tr>
+                            <td>PhD Scholarship in ECE, Mila - Quebec AI Institute & McGill University</td>
+                            <td style="text-align: right">2024</td>
+                    </tr>
+                    <tr>
+                        <td>Postgraduate Scholarship, HKUST, GZ</td>
+                        <td style="text-align: right">2022</td>
+                    </tr>
+                    <tr>
+                        <td>Undergraduate Excellent Scholarship, SYSU</td>
+                        <td style="text-align: right">2019</td>
+                    </tr>
+
+                </tbody></table>
+                </div>
+                <!-- ###################### -->
+
+                <h2 id="services" style="color:var(--ustyellow)">Professional Services</h2>
+                <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+                <h3 style = "padding-left: 1.5%; font-style: italic;" > Conference Reviewer: </h3>
+
+                <div style="padding-left: 2.5%;line-height: 0.5">
+                  <table style="border-spacing: 2px; width: auto;">
+                    <tr>
+                      <td>NeurIPS</td>
+                      <td>25'</td>
+                    </tr>
+                    <tr>
+                      <td>ICLR</td>
+                      <td>25'</td>
+                    </tr>
+                    <tr>
+                      <td>CVPR</td>
+                      <td>25'</td>
+                    </tr>
+                    <tr>
+                      <td>AISTATS</td>
+                      <td>25'</td>
+                    </tr>
+                    <tr>
+                      <td>ICML</td>
+                      <td>25'</td>
+                    </tr>
+                  </table>
+                  </div>
+
+
+                <!-- <h2 id="Teaching" style="color:var(--ustyellow)">Teaching</h2>
+                <hr style="margin-top:-16px;margin-bottom:10px;" />
+                <table id="Teaching" border="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td>AIAA5023 Introduction to Computer Vision, HKUST, GZ</td><td></td><td style="text-align: right">2023-2024</td>
+                        </tr>
+                    </tbody>
+                </table> -->
+
+                <h2 id="" style="color:var(--ustyellow)">Research Interests</h2>
+                <hr style="margin-top:-16px;margin-bottom:10px;" />
+                <div style="padding-left: 2.5%;">
+                <ul>
+                  <table style="border-spacing: 2px; width: auto;">
+                    <tr>
+                      <td>3D Model Generation</td>
+                    </tr>
+                    <tr>
+                      <td>Feed-forward 3D Scene Reconsrtuction</td>
+                    </tr>
+                  </table>
+
+                </ul>
+                </div>
+
+
+                <p  style="margin: 0 auto;width: 50%;text-align: center;">
+                    <a  href="#">
+                    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=1PdlHW3BB8bDQVmfua3IVK_jlHWLkGp97VYU-t0h8nU&cl=ffffff&w=a"></script>
+                    </a>
+                </p>
+
+                <p><center><font>
+                        <br>&copy; Yang Li| Last updated: Oct. 2025</font></center>
+                </p>
+            </main>
+        </div>
     </div>
-    <div class="row" style="padding-left: 1.5%;">
-      <ul>
-        <li data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true" class="aos-init aos-animate">
-          • <b>2025.3:</b>&nbsp I start my research intern at Tencent LIGHTSPEED STUDIOS, working on Large 3D Models. Collabrations are highly welcomed.
-        </li>
-        <li data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true" class="aos-init aos-animate">
-          • <b>2024.12:</b>&nbsp I am looking for PhD position in 2025. Please <a style="color:var(--ustyellow)" href="mailto:liyangaftermath@gmail.com"> contact me </a> if you are interested.
-        </li>
-
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-<!--<h2 id="codebase" style="color:rgb(59, 103, 236)">Codebase</h2>-->
-<!--<hr style="margin-top:-16px;margin-bottom:10px;" />-->
-
-<!--<table class="">-->
-<!--<tr>-->
-<!--    <td width="30%" valign="top">-->
-<!--        <img src="content/images/pcdet_min.png" width="96%" height="100" />-->
-<!--    </td>-->
-<!--    <td width="70%" valign="top">-->
-<!--        <div style="margin-top:0px;margin-bottom:0px;">-->
-<!--        <a href="https://github.com/open-mmlab/OpenPCDet" style="">-->
-<!--            OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Cloud-->
-<!--        </a>-->
-<!--        <br>-->
-<!--        <br />-->
-<!--        <font color="#000000">OpenPCDet Development Team</font> <strong style="color:rgb(247, 13, 29)">(Core developer)</strong>-->
-<!--        <br />-->
-<!--        <font style="font-size:15px;"><em>-->
-<!--      &lt;!&ndash;       arXiv:1912.13192, Technical Report, 2019-->
-<!--            </em>  &ndash;&gt;-->
-<!--            June 2020-->
-<!--            </em>-->
-<!--        </font>-->
-<!--        <br>-->
-<!--        <br />-->
-<!--        <a href="https://github.com/open-mmlab/OpenPCDet" style="">[CODE]</a> &nbsp;-->
-<!--            <a href="javascript:hideshow(document.getElementById('OpenPCDet'))"> [Bibtex] </a> &nbsp;-->
-<!--            <a href="https://github.com/open-mmlab/OpenPCDet"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/open-mmlab/OpenPCDet?style=social" /> </a>-->
-<!--        <br />-->
-<!--        </div>-->
-<!--    </td>-->
-<!--</tr>-->
-<!--</table>-->
-<!-- <pre><p id="OpenPCDet" style="font:18px; display:none">
-@inproceedings{shi2020pcdet,
-  title={OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Cloud},
-  author={Shi, Shaoshuai and Guo, Chaoxu and Li, Hongsheng},
-  Journal ={https://github.com/open-mmlab/OpenPCDet},
-  year={2020}
-}
-</p></pre> -->
-<!--<pre><p id="OpenPCDet" style="font:18px; display:none">-->
-<!--@misc{openpcdet2020,-->
-<!--    title={OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Clouds},-->
-<!--    author={OpenPCDet Development Team},-->
-<!--    howpublished = {\url{https://github.com/open-mmlab/OpenPCDet}},-->
-<!--    year={2020}-->
-<!--}-->
-<!--</p></pre>-->
-
-<h2 id="experiences" style="color:var(--ustyellow)">Experience</h2>
-<hr style="margin-top:-16px;margin-bottom:10px;" />
-
-<ul style="font-size: 14px">
-<!--  <li style="margin-bottom: 10px">-->
-<!--    <span><strong>Brown University</strong></span>-->
-<!--    <div style="float: right;">Aug. 2020 - Nov. 2020</div>-->
-<!--    <br clear="all">-->
-<!--    <span>M.Sc. Program in Computer Science.</span>-->
-<!--  </li>-->
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <img class="responsive-img" src="images/tencent_lightspeed.png" width="250">
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"><a href="https://www.lightspeed-studios.com/r&d-capabilities.html" style="color: var(--ustblue)">Tencent IEG</a></div>
-      <div class="paper-author">LightSpeed Studios Research, working on Large 3D Models</div>
-      <div class="paper-conf"><em><b> Internship</b>: Mar 2025 - Current</em></div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <img class="responsive-img" src="images/msra-fig.png" width="250">
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/" style="color: var(--ustblue)">Microsoft Research Asia</a></div>
-      <div class="paper-author">Media Computing Group, working on Generalizable 3D Gaussian Splatting</div>
-      <div class="paper-conf"><em><b> <a style="color:var(--ustyellow)">Stars of Tomorrow</a> Internship</b>: Jun 2024 - Feb 2025</em></div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <img class="responsive-img" src="images/smartmore-logo.png" width="250">
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"> <a href="https://alum.hkust.edu.hk/alumni-stories/alumni-kaleidoscope/3590/jiaya_jia" style="color: var(--ustblue)">SmartMore</a></div>
-      <div class="paper-author"> Optical Imaging Research Group, working on Neural 3D Reconstruction</div>
-      <div class="paper-conf"><em><b>Internship</b>: Jun 2022 - May 2024</em></div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <img class="responsive-img" src="images/sysu.jpg" width="250">
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title">Sun Yat-sen University</div>
-      <div class="paper-author">AI Lab, working on Biomedical Image Analysis</div>
-      <div class="paper-conf"><em><b>Internship</b>: Mar 2021 - Nov 2021</em></div>
-  </div>
-</div>
-
-
-</ul>
-
-<h2 id="publications" style="color:var(--ustyellow)">Publications <a style="color:var(--ustlightyellow)" href="https://scholar.google.com/citations?user=kqrSHAYAAAAJ&hl=zh-CN">[Google Scholar]</a></h2>
-<hr style="margin-top:-16px;margin-bottom:10px;" />
-
-<p>*: Equal Contribution</p>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate"
-      data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine"
-      data-aos-duration="500" data-aos-once="true">
-
-    <div class="teaser-wrapper">
-      <div class="teaser-badge-arxiv">Arxiv 2025</div>
-    
-      <video class="responsive-img teaser-media"
-            style="width:100%; aspect-ratio: 1/0.618; resize: both;"
-            autoplay loop muted playsinline>
-        <source src="images/uvrm_teaser.mp4" type="video/mp4">
-      </video>
-    </div>
-
-  </div>
-
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"><i>UVRM</i>: A Scalable 3D Reconstruction Model from Unposed Videos</div>
-      <div class="paper-author"> Shiu-hong Kao, Xiao Li, Jinglu Wang, <span class="highlight-name">Yang Li</span>, Chi-Keung Tang, Yu-Wing Tai, Yan Lu.</div>
-      <div class="paper-conf"><em>Arxiv Preprint. 2025</em></div>
-      <div class = "paper-links"> 
-        <a href="http://arxiv.org/abs/2501.09347">[Paper]</a>
-        <a href="https://cse.hkust.edu.hk/~skao/src/uvrm_demo.mp4">[Demo]</a>
-      </div>
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-    
-    <div class="teaser-wrapper">
-      <div class="teaser-badge">ICCV 2025</div>
-        <video class="responsive-img" style="width: 100%; aspect-ratio: 1/0.618; resize: both;" autoplay loop muted>
-          <source src="images/streamgs_demo.mp4" type="video/mp4">
-        </video>
-    </div>
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"><i>StreamGS</i>: Online Generalizable Gaussian Splatting Reconstruction for Unposed Image Streams</div>
-      <div class="paper-author"> <span class="highlight-name">Yang Li</span>, Jinglu Wang, Lei Chu, Xiao Li, Shiu-Hong Kao, Yingcong Chen, Yan Lu.</div>
-      <div class="paper-conf"><em>International Conference on Computer Vision (ICCV). 2025</em></div>
-      <div class = "paper-links"> 
-        <a href="https://arxiv.org/abs/2503.06235">[Paper]</a>
-      </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      
-    <div class="teaser-wrapper">
-      <div class="teaser-badge-highlight">ICCVW 2025 Oral</div>
-        <img class="responsive-img" src="images/seed_story_teaser.jpg" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
-  
-      </div>
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"><i>SEED-Story</i>: Multimodal Long Story Generation with Large Language Model</div>
-      <div class="paper-author"> Shuai Yang, Yuying Ge, <span class="highlight-name">Yang Li</span>, Yukang Chen, Yixiao Ge, Ying Shan, Yingcong Chen.</div>
-      <div class="paper-conf"><em><b>Oral</b>, 1st Workshop on Human-Interactive Generation and Editing, International Conference on Computer Vision (ICCV). 2025</em></div>
-      <div class = "paper-links"> 
-        <a href="https://arxiv.org/abs/2407.08683">[Paper]</a>
-        <a href="https://huggingface.co/TencentARC/SEED-Story">[Model]</a>
-        <a href="https://huggingface.co/datasets/TencentARC/StoryStream">[Data]</a>
-        <a href="https://github.com/TencentARC/SEED-Story">[Code]</a><a href="https://github.com/TencentARC/SEED-Story"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/TencentARC/SEED-Story?style=social" /> </a>
-      </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      
-  <div class="teaser-wrapper">
-    <div class="teaser-badge">ICLR 2024</div>
-    <img class="responsive-img" src="images/gnerp_teaser.png" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
-    </div>
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"><i>GNeRP</i>:  Gaussian guided
-        Neural Reconstruction of Reflective Objects with Noisy Polarization Priors
-          </div>
-      <div class="paper-author"> <span class="highlight-name">Yang Li</span>, Ruizheng Wu, Jiyong Li, Yingcong Chen.</div>
-      <div class="paper-conf"><em>International Conference on Learning Representations (ICLR), 2024.</em></div>
-      <div class = "paper-links"> 
-        <a href="https://yukiumi13.github.io/gnerp_page/gnerp_camera_ready.pdf">[Paper]</a>
-        <a href="https://yukiumi13.github.io/gnerp_page/gnerp_camera_ready.pdf">[Project Page]</a>
-        <a href="https://drive.google.com/drive/folders/19j1Px5hT74dpZwKRgX0pfycr35AsbKgj">[Data]</a>
-        <a href="https://github.com/yukiumi13/GNeRP">[Code]</a>
-      </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-
-    <div class="teaser-wrapper">
-      <div class="teaser-badge">AAAI 2024</div>
-      <img class="responsive-img" src="images/ccls_teaser.png" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
-    </div>
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title">Contrastive Continual Learning with Importance Sampling and Prototype-Instance Relation Distillation
-          </div>
-      <div class="paper-author"> Jiyong Li, Dilshod Azizov, <span class="highlight-name">Yang Li</span>, Shangsong Liang.</div>
-      <div class="paper-conf"><em>Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024.</em></div>
-      <div class = "paper-links"> 
-        <a href="https://arxiv.org/pdf/2403.04599">[Paper]</a>
-        <a href="https://github.com/lijy373/CCLIS">[Code]</a>
-      </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m12 l4 center aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-
-        <img class="responsive-img" src="images/dcnet_teaser.jpg" style="width: 100%; aspect-ratio: 1/0.618 ; resize: both;">
-    
-  </div>
-
-  <div class="col s12 m12 l8 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-once="true">
-      <div class="paper-title"><i>DCNet</i>: Densely Connected Deep Convolutional Encoder Decoder Network for Nasopharyngeal Carcinoma Segmentation
-          </div>
-      <div class="paper-author"> <span class="highlight-name">Yang Li</span>, Guanghui Han,  Xiujian Liu.</div>
-      <div class="paper-conf"><em>Sensors 2021, 21(23), 7877. </em></div>
-      <div class = "paper-links"> 
-        <a href="https://www.mdpi.com/1424-8220/21/23/7877">[Paper]</a>
-        <a href="https://github.com/yukiumi13/DCNet">[Code]</a>
-      </div>
-  </div>
-</div>
-
-<h2 id="awards" style="color:var(--ustyellow)">Honors &amp; Awards</h2>
-<hr style="margin-top:-16px;margin-bottom:10px;" />
-<div style="padding-left: 2.5%;">
-<table style="border-spacing:2px;" width="100%">
-    <tbody>
-    <tr>
-        <td>PhD Scholarship in Computer Science, Rutgers University</td>
-        <td style="text-align: right">2025</td>
-    </tr>
-    <tr>
-        <td>PhD Scholarship in Computer Science, Dartmouth College</td>
-        <td style="text-align: right">2025</td>
-    </tr>
-    <tr>
-        <td>Stars of Tomorrow (Award of Excellent Intern), Microsoft Research Asia</td>
-        <td style="text-align: right">2025</td>
-    </tr>
-    <tr>
-            <td>PhD Scholarship in ECE, Mila - Quebec AI Institute & McGill University</td>
-            <td style="text-align: right">2024</td>
-    </tr>
-    <tr>
-        <td>Postgraduate Scholarship, HKUST, GZ</td>
-        <td style="text-align: right">2022</td>
-    </tr>
-    <tr>
-        <td>Undergraduate Excellent Scholarship, SYSU</td>
-        <td style="text-align: right">2019</td>
-    </tr>
-
-</tbody></table>
-</div>
-<!-- ###################### -->
-
-<h2 id="services" style="color:var(--ustyellow)">Professional Services</h2>
-<hr style="margin-top:-16px;margin-bottom:10px;" />
-
-<h3 style = "padding-left: 1.5%; font-style: italic;" > Conference Reviewer: </h3>
-
-<div style="padding-left: 2.5%;line-height: 0.5">
-  <table style="border-spacing: 2px; width: auto;">
-    <tr>
-      <td>NeurIPS</td>
-      <td>25'</td>
-    </tr>
-    <tr>
-      <td>ICLR</td>
-      <td>25'</td>
-    </tr>
-    <tr>
-      <td>CVPR</td>
-      <td>25'</td>
-    </tr>
-    <tr>
-      <td>AISTATS</td>
-      <td>25'</td>
-    </tr>
-    <tr>
-      <td>ICML</td>
-      <td>25'</td>
-    </tr>
-  </table>
-  </div>
-
-
-<!-- <h2 id="Teaching" style="color:var(--ustyellow)">Teaching</h2>
-<hr style="margin-top:-16px;margin-bottom:10px;" />
-<table id="Teaching" border="0" width="100%">
-	<tbody>
-		<tr>
-			<td>AIAA5023 Introduction to Computer Vision, HKUST, GZ</td><td></td><td style="text-align: right">2023-2024</td>
-		</tr>
-	</tbody>
-</table> -->
-
-<h2 id="" style="color:var(--ustyellow)">Research Interests</h2>
-<hr style="margin-top:-16px;margin-bottom:10px;" />
-<div style="padding-left: 2.5%;">
-<ul>
-  <table style="border-spacing: 2px; width: auto;">
-    <tr>
-      <td>3D Model Generation</td>
-    </tr>
-    <tr>
-      <td>Feed-forward 3D Scene Reconsrtuction</td>
-    </tr>
-  </table>
-
-</ul>
-</div>
-
-
-<p  style="margin: 0 auto;width: 50%;text-align: center;">
-	<a  href="#">
-	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=1PdlHW3BB8bDQVmfua3IVK_jlHWLkGp97VYU-t0h8nU&cl=ffffff&w=a"></script>
-	</a>
-</p>
-
-<p><center><font>
-        <br>&copy; Yang Li| Last updated: Oct. 2025</font></center>
-</p>
-
-
-</body>
-</html>
