@@ -240,9 +240,7 @@ a:hover{
   font-weight: 600;
   padding: 4px 8px 5px 8px;
   line-height: 1.05;
-  border-bottom-right-radius: 6px;
   letter-spacing: .5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.25);
   pointer-events: none;         /* 避免遮挡点击 */
   font-family: "Exo 2", "Times New Roman", Times, serif;
 
@@ -258,9 +256,7 @@ a:hover{
   font-weight: 600;
   padding: 4px 8px 5px 8px;
   line-height: 1.05;
-  border-bottom-right-radius: 6px;
   letter-spacing: .5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.25);
   pointer-events: none;         /* 避免遮挡点击 */
   font-family: "Exo 2", "Times New Roman", Times, serif;
 }
@@ -275,9 +271,7 @@ a:hover{
   font-weight: 600;
   padding: 4px 8px 5px 8px;
   line-height: 1.05;
-  border-bottom-right-radius: 6px;
   letter-spacing: .5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.25);
   pointer-events: none;
   font-family: "Exo 2", "Times New Roman", Times, serif;
 }
