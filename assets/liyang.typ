@@ -1,5 +1,6 @@
-#import "@preview/basic-resume:0.2.3": *
-
+// #import "@preview/basic-resume:0.2.3": *
+#import "./resume_template.typ": *
+#import "@preview/fontawesome:0.6.0": *
 // Functions
 
 #let publication(title:"",
@@ -22,15 +23,16 @@ grid(
 
 // Put your personal information here, replacing mine
 #let name = "Yang(Marino) Li"
-#let location = "Shenzhen, CN"
 #let email = "yang.marino.li@gmail.com"
 #let github = "github.com/yukiumi13"
 #let linkedin = ""
 #let phone = ""
-#let personal-site = "yukiumi13.github.io"
-
+#let personal-site = "yangmarino.li"
+#let google-scholar = "kqrSHAYAAAAJ"
+#let location = ""
+#let today = datetime.today()
 #set page(
-  footer:align(center, text(size:7pt,[Updated in Mar. 2025 | Copyright © Yang Li]))
+  footer: align(center, text(size: 7pt, [Updated in #today.display("[month repr:short] [year]") | Copyright © Yang Li]))
 )
 
 
@@ -45,6 +47,7 @@ grid(
   linkedin: linkedin,
   phone: phone,
   personal-site: personal-site,
+  google-scholar: google-scholar,
   accent-color: "#26428b",
   font: "SF",
   paper: "us-letter",
@@ -65,6 +68,14 @@ grid(
 * #generic-one-by-two(left: "", right: "")
 */
 == Education
+#edu(
+  institution: "Rutgers, The State University of New Jersey-New Brunswick",
+  location: "New Brunswick, NJ, US",
+  dates: dates-helper(start-date: "Aug 2025", end-date: "Present"),
+  degree: "Doctor of Philosophy, Computer Science",
+)
+- Supervisor: Dr. #link("https://chengzhi-mao.github.io/")[Chengzhi Mao]
+- Research Interests: Parallel and Spatial Reasoning for (Multimodal) Large Language Models
 
 #edu(
   institution: "Hong Kong University of Science and Technology, Guangzhou",
@@ -72,7 +83,7 @@ grid(
   dates: dates-helper(start-date: "Aug 2022", end-date: "Oct 2024"),
   degree: "Master of Philosophy, Artificial Intelligence",
 )
-- Supervisor: Dr. #link("https://yingcong.me")[Ying-Cong Chen], co-supervised by Dr. #link("https://danxurgb.net")[Dan Xu] (Clear Water Bay)
+- Supervisor: Dr. #link("https://yingcong.me")[Ying-Cong Chen], co-supervised by Dr. #link("https://danxurgb.net")[Dan Xu]
 - Thesis: Neural 3D Reconstruction of Reflective Objects
 
 #edu(
@@ -82,7 +93,15 @@ grid(
   degree: "Bachelor of Science, Mathematics and Applied Mathematics",
 )
 - Thesis: Sim2Real Segmentation for Autonomous Driving
-== Work Experience
+== Research Experience
+#work(
+  title: "Department of Computer Science, Rutgers University",
+  location: "New Brunswick, NJ, US",
+  company: "Graduate Research Assistant",
+  dates: dates-helper(start-date: "Aug 2025", end-date: "Present"),
+)
+- *Parallel Reasoning for Large Language Models:* Conducting research on parallel and interactive reasoning mechanisms. We are developing frameworks that enable LLMs to perform concurrent reasoning with mutual communication, aiming to enhance both inference efficiency and accuracy.
+- Supervisor: Dr. #link("https://chengzhi-mao.github.io/")[Chengzhi Mao]
 
 #work(
   title: "LightSpeed Studios, Tencent",
@@ -90,17 +109,16 @@ grid(
   company: "Research Intern",
   dates: dates-helper(start-date: "Mar 2025", end-date: "Present"),
 )
-- Doing research on *Large Generative 3D Models*. We are developing a universal 3D asset generation framework designed to seamlessly integrate with the down-streaming game development pipeline.
+- *Large Generative 3D Models:* Developing a universal 3D asset generation framework, _LightSpeed 3D 1.0_, designed to seamlessly integrate with downstream game development pipelines. *Technical report with full-stack open-source release is upcoming.*
 - Mentor: Dr. #link("https://hzykent.github.io/")[Zeyu Hu] and Dr. #link("https://johann.wang/")[Yuhan Wang]
 
-
 #work(
-  title: "Media Computing Group, Microsoft Research Lab - Asia, Microsoft",
+  title: "Media Computing Group, Microsoft Research Lab - Asia (MSRA)",
   location: "Beijing, CN",
   company: "Research Intern",
   dates: dates-helper(start-date: "Jun 2024", end-date: "Feb 2025"),
 )
-- Doing research on *Neural 3D Representation from Unposed Videos*. We proposed some online generalizable 3DGS reconstruction methods for monocular videos, which transform videos to 3D Gaussians within seconds.
+- *Neural 3D Representation from Unposed Videos:* Proposed an online generalizable 3D Gaussian Splatting (3DGS) reconstruction method for monocular videos. The system transforms video streams into 3D Gaussians within seconds. This work was accepted by *ICCV 2025*.
 - Mentor: Dr. #link("https://www.microsoft.com/en-us/research/people/jinglwa/")[Jinglu Wang] and Dr. #link("https://pableeto.netlify.app/")[Xiao Li]
 
 #work(
@@ -109,16 +127,16 @@ grid(
   company: "Research Intern",
   dates: dates-helper(start-date: "Jun 2022", end-date: "May 2024"),
 )
-- Doing research on *Neural 3D Reconstruction with Polarization Cues*. We developed a low-cost and accurate multi-view 3D reconstruction pipeline dedicated for reflective objects with physics information.
+- *Neural 3D Reconstruction with Polarization Cues:* Developed a low-cost and accurate multi-view 3D reconstruction pipeline specifically for reflective objects by leveraging physics-based polarization cues. This work was accepted by *ICLR 2024*. // 假设你是说ICLR，原文本写的是ICCV/ICLR? 需确认
 - Mentor: Dr. #link("https://sites.google.com/site/jiangbolu/")[Jiangbo Lu] and Dr. #link("https://scholar.google.com/citations?user=rW2bJ-UAAAAJ&hl=en")[Nianjuan Jiang]
 
 #work(
-  title: "BME AI Lab, SYSU",
+  title: "BME AI Lab, Sun Yat-sen University",
   location: "Guangzhou, CN",
   company: "Research Assistant",
-  dates: dates-helper(start-date: " Mar 2021", end-date: "Nov 2021"),
+  dates: dates-helper(start-date: "Mar 2021", end-date: "Nov 2021"),
 )
-- Doing research on *Nasopharyngeal Carcinoma Segmentation in Magnetic Resonance Imaging*. We enhanced the accuracy of existing tumor region segmentation methods, facilitating precise radiotherapy treatments.
+- *Medical Image Segmentation:* Enhanced the accuracy of nasopharyngeal carcinoma segmentation in MRI scans to facilitate precise radiotherapy treatments. The findings were published in the journal _Sensors_.
 - Supervisor: Dr. Zhifan Gao
 
 == Publications
@@ -144,7 +162,7 @@ grid(
 )
 
 #publication(
-  tag: "HiGen '25 Oral",
+  tag: "ICCVW '25 Oral",
   title: "SEED-Story: Multimodal Long Story Generation with Large Language Model",
   authors: [Shuai Yang, Yuying Ge, *Yang Li*, Yukang Chen, Yixiao Ge, Ying Shan, Yingcong Chen],
   venue: [*Oral*, Workshop on Human-Interactive Generation and Editing, International Conference on Computer Vision (ICCV)],
@@ -170,7 +188,7 @@ grid(
 )
 
 #publication(
-  tag: "Journal '24",
+  tag: "Sensors '24",
   title: "DCNet: Densely Connected Deep Convolutional Encoder Decoder Network for Nasopharyngeal Carcinoma Segmentation",
   authors: [*Yang Li*, Guanghui Han, Xiujian Liu],
   venue: "Sensors 2021, 21(23), 7877",
