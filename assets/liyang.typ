@@ -109,7 +109,7 @@ grid(
   company: "Research Intern",
   dates: dates-helper(start-date: "Mar 2025", end-date: "Present"),
 )
-- *Large Generative 3D Models:* Developing a universal 3D asset generation framework, _LightSpeed 3D 1.0_, designed to seamlessly integrate with downstream game development pipelines. *Technical report with full-stack open-source release is upcoming.*
+- *Large Generative 3D Models:* Developing a universal 3D asset generation framework, _UltraShape 3D 1.0_, designed to seamlessly integrate with downstream game development pipelines. *Technical report with full-stack open-source is released to public to facilitate community collaboration and innovation.*
 - Mentor: Dr. #link("https://hzykent.github.io/")[Zeyu Hu] and Dr. #link("https://johann.wang/")[Yuhan Wang]
 
 #work(
@@ -127,7 +127,7 @@ grid(
   company: "Research Intern",
   dates: dates-helper(start-date: "Jun 2022", end-date: "May 2024"),
 )
-- *Neural 3D Reconstruction with Polarization Cues:* Developed a low-cost and accurate multi-view 3D reconstruction pipeline specifically for reflective objects by leveraging physics-based polarization cues. This work was accepted by *ICLR 2024*. // 假设你是说ICLR，原文本写的是ICCV/ICLR? 需确认
+- *Neural 3D Reconstruction with Polarization Cues:* Developed a low-cost and accurate multi-view 3D reconstruction pipeline specifically for reflective objects by leveraging physics-based polarization cues. This work was accepted by *ICLR 2024*. 
 - Mentor: Dr. #link("https://sites.google.com/site/jiangbolu/")[Jiangbo Lu] and Dr. #link("https://scholar.google.com/citations?user=rW2bJ-UAAAAJ&hl=en")[Nianjuan Jiang]
 
 #work(
@@ -141,7 +141,16 @@ grid(
 
 == Publications
 
-=== Under Review
+=== Preprints
+
+#publication(
+  tag: "Tech Report '25",
+  title: "UltraShape 1.0: High-Fidelity 3D Shape Generation via Scalable Geometric Refinement",
+  authors: [Tanghui Jia, Dongyu Yan, Dehao Hao, *Yang Li*, Kaiyi Zhang, Xianyi He, Lanjiong Li, Jinnan Chen, Lutao Jiang, Qishen Yin, Long Quan, Ying-Cong Chen, Li Yuan],
+  venue: "arXiv:2512.21185",
+  year: 2025,
+  note: link("https://pku-yuangroup.github.io/UltraShape-1.0/")[website]
+)
 
 #publication(
   tag: "Arxiv '25",
