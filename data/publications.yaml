@@ -165,6 +165,7 @@
   venue: "Sensors 2021, 21(23), 7877"
   year: 2021
   type: peer-reviewed
+  badge: { text: "Sensors 2021", kind: normal }
   teaser: { src: "/images/dcnet_teaser.jpg", kind: image }
   links:
     - { label: Paper, href: "https://www.mdpi.com/1424-8220/21/23/7877" }
