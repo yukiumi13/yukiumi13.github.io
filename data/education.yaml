@@ -1,0 +1,27 @@
+# Education — currently CV-only. Website doesn't render education.
+
+- institution: "Rutgers, The State University of New Jersey-New Brunswick"
+  location: "New Brunswick, NJ, US"
+  start: "Aug 2025"
+  end: "Present"
+  degree: "Doctor of Philosophy, Computer Science"
+  notes:
+    - "Supervisor: [Chengzhi Mao](https://chengzhi-mao.github.io/)"
+    - "Research Interests: Parallel and Spatial Reasoning for (Multimodal) Large Language Models"
+
+- institution: "Hong Kong University of Science and Technology, Guangzhou"
+  location: "Guangzhou, CN"
+  start: "Aug 2022"
+  end: "Oct 2024"
+  degree: "Master of Philosophy, Artificial Intelligence"
+  notes:
+    - "Supervisor: [Ying-Cong Chen](https://yingcong.me), co-supervised by [Dan Xu](https://danxurgb.net)"
+    - "Thesis: Neural 3D Reconstruction of Reflective Objects"
+
+- institution: "Sun Yat-sen University"
+  location: "Guangzhou, CN"
+  start: "Aug 2018"
+  end: "Jun 2022"
+  degree: "Bachelor of Science, Mathematics and Applied Mathematics"
+  notes:
+    - "Thesis: Sim2Real Segmentation for Autonomous Driving"

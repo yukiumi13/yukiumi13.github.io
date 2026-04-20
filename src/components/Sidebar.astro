@@ -1,0 +1,42 @@
+---
+import { profile } from '../data/profile';
+---
+<aside class="lg:w-[300px] lg:shrink-0 lg:sticky lg:top-20 self-start">
+  <div class="text-left lg:text-left">
+    <div class="max-w-[280px] mx-auto lg:mx-0">
+      <img
+        src={profile.photo.src}
+        alt="Profile Photo"
+        class="w-full aspect-square object-cover object-[left_center] rounded-full"
+      />
+      <p class="italic text-neutral-500 text-sm text-center mt-2">
+        {profile.photo.caption}
+      </p>
+    </div>
+
+    <h1 class="mt-6 mb-4 text-ust-blue font-light text-[2rem] leading-tight tracking-tight2">
+      {profile.name} <i class="font-normal">({profile.nickname})</i> {profile.surname}
+    </h1>
+
+    <p class="text-[15px] leading-relaxed">
+      <b>{profile.title}</b><br />
+      {profile.affiliation.map((l) => <>{l}<br /></>)}
+      <br />
+      Email: <br />{profile.email}
+    </p>
+
+    <ul class="list-none p-0 mt-5 space-y-2">
+      {profile.links.map((l) => (
+        <li>
+          <a
+            href={l.href}
+            class="flex items-center gap-2 text-ust-blue hover:text-ust-gold"
+          >
+            <i class={`${l.icon} w-5 text-center`}></i>
+            <span>{l.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</aside>

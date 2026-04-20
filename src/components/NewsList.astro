@@ -1,0 +1,10 @@
+---
+import { news } from '../data/news';
+---
+<ul class="pl-4 space-y-2">
+  {news.map((n) => (
+    <li class="reveal text-[15px]">
+      • <b>{n.date}:</b>&nbsp;<span set:html={n.html} />
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  id?: string;
+  title: string;
+  titleHtml?: string;
+}
+const { id, title, titleHtml } = Astro.props;
+---
+<section id={id} class="mt-8">
+  <h2 class="section-heading">
+    {titleHtml ? <span set:html={titleHtml} /> : title}
+  </h2>
+  <hr class="section-rule" />
+  <slot />
+</section>

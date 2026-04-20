@@ -1,0 +1,157 @@
+---
+import type { Publication } from '../data/publications';
+interface Props {
+  pub: Publication;
+}
+const { pub } = Astro.props;
+
+const inlineBadgeClass = pub.badge
+  ? {
+      normal: 'bg-ust-blue text-white',
+      highlight: 'bg-ust-gold text-white',
+      arxiv: 'bg-ust-arxiv text-white',
+      none: '',
+    }[pub.badge.type]
+  : '';
+
+const primaryHref = pub.links[0]?.href;
+---
+<article class="grid grid-cols-1 lg:grid-cols-12 gap-4 my-6">
+  <div class="lg:col-span-4 flex justify-center reveal reveal-right">
+    <a
+      href={primaryHref}
+      class="block relative w-full overflow-hidden rounded-lg border border-neutral-200
+             shadow-[0_1px_2px_rgba(0,0,0,0.04)] bg-neutral-100
+             hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:border-ust-blue/30
+             transition-[box-shadow,border-color] duration-200 group pub-teaser"
+      style="aspect-ratio: 5 / 3;"
+      data-teaser
+    >
+      {pub.teaser ? (
+        pub.teaser.type === 'image' ? (
+          <img
+            src={pub.teaser.src}
+            alt={pub.title}
+            class={`absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-[1.04] ${
+              pub.teaser.fit === 'contain' ? 'object-contain p-3' : 'object-cover'
+            }`}
+            style={pub.teaser.pos ? `object-position: ${pub.teaser.pos}` : undefined}
+            loading="lazy"
+          />
+        ) : (
+          <video
+            class={`absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-[1.04] ${
+              pub.teaser.fit === 'contain' ? 'object-contain' : 'object-cover'
+            }`}
+            style={pub.teaser.pos ? `object-position: ${pub.teaser.pos}` : undefined}
+            loop
+            muted
+            playsinline
+            preload="metadata"
+          >
+            <source src={pub.teaser.src} type="video/mp4" />
+          </video>
+        )
+      ) : (
+        <div
+          class="absolute inset-0 flex items-center justify-center p-4 text-center"
+          style="background: linear-gradient(135deg, #003C71 0%, #0C1C2F 100%);"
+        >
+          <div class="text-white/90">
+            <div class="text-[11px] uppercase tracking-[0.2em] text-ust-gold/90 mb-1">
+              {pub.badge?.text ?? 'Preprint'}
+            </div>
+            <div class="text-[15px] font-semibold leading-snug line-clamp-3">
+              {pub.titleItalic ?? pub.title.split(':')[0]}
+            </div>
+          </div>
+        </div>
+      )}
+    </a>
+  </div>
+
+  <div class="lg:col-span-8 reveal reveal-left">
+    {pub.badge && (
+      <div class="mb-2">
+        <span class={`inline-block text-[10px] font-semibold uppercase tracking-[0.15em]
+                       px-2 py-[3px] rounded-[2px] ${inlineBadgeClass}`}>
+          {pub.badge.text}
+        </span>
+      </div>
+    )}
+    <div class="text-[1.15rem] font-semibold text-neutral-900 leading-snug">
+      {pub.titleItalic && <i>{pub.titleItalic}</i>}{pub.title}
+    </div>
+    <div class="text-[15px] mt-2 text-neutral-700" set:html={pub.authorsHtml}></div>
+    <div class="text-[14px] italic mt-1 text-neutral-600" set:html={pub.venue}></div>
+    <div class="mt-3 flex flex-wrap gap-2 items-center">
+      {pub.links.map((l) => {
+        const iconMap = {
+          Paper: 'fa-solid fa-file-lines',
+          Website: 'fa-solid fa-globe',
+          'Project Page': 'fa-solid fa-globe',
+          Code: 'fa-brands fa-github',
+          Data: 'fa-solid fa-database',
+          Model: 'fa-solid fa-cube',
+          Demo: 'fa-solid fa-play',
+        };
+        const icon = iconMap[l.label] || 'fa-solid fa-link';
+        return (
+          <>
+            <a
+              href={l.href}
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px]
+                     font-medium border border-ust-blue/25 text-ust-blue
+                     hover:bg-ust-blue hover:text-white hover:border-ust-blue
+                     transition-colors"
+            >
+              <i class={`${icon} text-[11px]`}></i>
+              <span>{l.label}</span>
+            </a>
+            {l.githubStars && (
+              <a
+                href={l.href}
+                class="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px]
+                       text-neutral-600 hover:text-ust-blue transition-colors"
+                aria-label="GitHub stars"
+              >
+                <i class="fa-regular fa-star text-[10px]"></i>
+                <img
+                  alt=""
+                  class="h-[14px]"
+                  src={`https://img.shields.io/github/stars/${l.githubStars}?label=&style=flat-square&color=e5e5e5&labelColor=e5e5e5`}
+                />
+              </a>
+            )}
+          </>
+        );
+      })}
+    </div>
+  </div>
+</article>
+
+<script>
+  // Videos: pause by default, play on hover (desktop) or when scrolled into view (touch).
+  const isTouch = matchMedia('(hover: none)').matches;
+  const teasers = document.querySelectorAll<HTMLAnchorElement>('[data-teaser]');
+  teasers.forEach((teaser) => {
+    const video = teaser.querySelector('video');
+    if (!video) return;
+    video.pause();
+    if (isTouch) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) video.play().catch(() => {});
+            else video.pause();
+          }
+        },
+        { threshold: 0.4 },
+      );
+      io.observe(video);
+    } else {
+      teaser.addEventListener('mouseenter', () => video.play().catch(() => {}));
+      teaser.addEventListener('mouseleave', () => video.pause());
+    }
+  });
+</script>

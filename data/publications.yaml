@@ -1,0 +1,171 @@
+# Single source of truth for publications.
+# Consumed by both src/data/publications.ts (website) and public/assets/liyang.typ (CV).
+# Order: newest first (chronological). CV still filters preprint vs peer-reviewed.
+
+- title: "LACE: Lattice Attention for Cross-thread Exploration"
+  title_italic: "LACE"
+  authors:
+    - { name: "Yang Li", me: true }
+    - Zirui Zhang
+    - Yang Liu
+    - Chengzhi Mao
+  venue: "arXiv:2604.15529"
+  year: 2026
+  type: preprint
+  badge: { text: "Arxiv 2026", kind: arxiv }
+  teaser: { src: "/images/lace_teaser.svg", kind: image, fit: cover, pos: "bottom" }
+  links:
+    - { label: Paper, href: "https://arxiv.org/pdf/2604.15529" }
+
+- title: "APPLV: Adaptive Planner Parameter Learning from Vision-Language-Action Model"
+  title_italic: "APPLV"
+  authors:
+    - Yuanjie Lu
+    - Beichen Wang
+    - Zhengqi Wu
+    - { name: "Yang Li", me: true }
+    - Xiaomin Lin
+    - Chengzhi Mao
+    - Xuesu Xiao
+  venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  year: 2026
+  type: peer-reviewed
+  badge: { text: "IROS 2026", kind: normal }
+  teaser: { src: "/images/applv_teaser.svg", kind: image, fit: contain }
+  links:
+    - { label: Paper, href: "https://arxiv.org/pdf/2603.08862" }
+
+- title: "UltraShape 1.0: High-Fidelity 3D Shape Generation via Scalable Geometric Refinement"
+  title_italic: "UltraShape 1.0"
+  authors:
+    - Tanghui Jia
+    - Dongyu Yan
+    - Dehao Hao
+    - { name: "Yang Li", me: true }
+    - Kaiyi Zhang
+    - Xianyi He
+    - Lanjiong Li
+    - Jinnan Chen
+    - Lutao Jiang
+    - Qishen Yin
+    - Long Quan
+    - Ying-Cong Chen
+    - Li Yuan
+  venue: "arXiv:2512.21185"
+  year: 2025
+  type: preprint
+  badge: { text: "Tech Report", kind: normal }
+  teaser: { src: "/images/teaser_ultrashape.jpg", kind: image }
+  links:
+    - { label: Website, href: "https://pku-yuangroup.github.io/UltraShape-1.0" }
+    - { label: Paper, href: "https://arxiv.org/pdf/2512.21185" }
+    - { label: Code, href: "https://github.com/PKU-YuanGroup/UltraShape-1.0", github: "PKU-YuanGroup/UltraShape-1.0" }
+  cv_note: { label: website, href: "https://pku-yuangroup.github.io/UltraShape-1.0/" }
+
+- title: "StreamGS: Online Generalizable Gaussian Splatting Reconstruction for Unposed Image Streams"
+  title_italic: "StreamGS"
+  authors:
+    - { name: "Yang Li", me: true }
+    - Jinglu Wang
+    - Lei Chu
+    - Xiao Li
+    - Shiu-hong Kao
+    - Ying-Cong Chen
+    - Yan Lu
+  venue: "International Conference on Computer Vision (ICCV)"
+  year: 2025
+  type: peer-reviewed
+  badge: { text: "ICCV 2025", kind: normal }
+  teaser: { src: "/images/streamgs_demo.mp4", kind: video }
+  links:
+    - { label: Paper, href: "https://arxiv.org/abs/2503.06235" }
+
+- title: "SEED-Story: Multimodal Long Story Generation with Large Language Model"
+  title_italic: "SEED-Story"
+  authors:
+    - Shuai Yang
+    - Yuying Ge
+    - { name: "Yang Li", me: true }
+    - Yukang Chen
+    - Yixiao Ge
+    - Ying Shan
+    - Yingcong Chen
+  venue: "Oral, Workshop on Human-Interactive Generation and Editing, International Conference on Computer Vision (ICCV)"
+  year: 2025
+  type: peer-reviewed
+  badge: { text: "ICCVW 2025 Oral", kind: highlight }
+  teaser: { src: "/images/seed_story_teaser.jpg", kind: image }
+  links:
+    - { label: Paper, href: "https://arxiv.org/abs/2407.08683" }
+    - { label: Model, href: "https://huggingface.co/TencentARC/SEED-Story" }
+    - { label: Data, href: "https://huggingface.co/datasets/TencentARC/StoryStream" }
+    - { label: Code, href: "https://github.com/TencentARC/SEED-Story", github: "TencentARC/SEED-Story" }
+  cv_note: { label: code, href: "https://github.com/TencentARC/SEED-Story" }
+
+- title: "UVRM: A Scalable 3D Reconstruction Model from Unposed Videos"
+  title_italic: "UVRM"
+  authors:
+    - Shiu-hong Kao
+    - Xiao Li
+    - Jinglu Wang
+    - { name: "Yang Li", me: true }
+    - Chi-Keung Tang
+    - Yu-Wing Tai
+    - Yan Lu
+  venue: "arXiv:2501.09347"
+  year: 2025
+  type: preprint
+  badge: { text: "Arxiv 2025", kind: arxiv }
+  teaser: { src: "/images/uvrm_teaser.mp4", kind: video }
+  links:
+    - { label: Paper, href: "http://arxiv.org/abs/2501.09347" }
+    - { label: Demo, href: "https://cse.hkust.edu.hk/~skao/src/uvrm_demo.mp4" }
+  cv_note: { label: demo, href: "https://cse.hkust.edu.hk/~skao/src/uvrm_demo.mp4" }
+
+- title: "GNeRP: Gaussian guided Neural Reconstruction of Reflective Objects with Noisy Polarization Priors"
+  title_italic: "GNeRP"
+  authors:
+    - { name: "Yang Li", me: true }
+    - Ruizheng Wu
+    - Jiyong Li
+    - Yingcong Chen
+  venue: "International Conference on Learning Representations (ICLR)"
+  year: 2024
+  type: peer-reviewed
+  badge: { text: "ICLR 2024", kind: normal }
+  teaser: { src: "/images/gnerp_teaser.png", kind: image }
+  links:
+    - { label: Project Page, href: "https://yukiumi13.github.io/gnerp_page/" }
+    - { label: Paper, href: "https://yukiumi13.github.io/gnerp_page/gnerp_camera_ready.pdf" }
+    - { label: Data, href: "https://drive.google.com/drive/folders/19j1Px5hT74dpZwKRgX0pfycr35AsbKgj" }
+    - { label: Code, href: "https://github.com/yukiumi13/GNeRP" }
+  cv_note: { label: "project page", href: "https://yukiumi13.github.io/gnerp_page/" }
+
+- title: "Contrastive Continual Learning with Importance Sampling and Prototype-Instance Relation Distillation"
+  authors:
+    - Jiyong Li
+    - Dilshod Azizov
+    - { name: "Yang Li", me: true }
+    - Shangsong Liang
+  venue: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)"
+  year: 2024
+  type: peer-reviewed
+  badge: { text: "AAAI 2024", kind: normal }
+  teaser: { src: "/images/ccls_teaser.png", kind: image }
+  links:
+    - { label: Paper, href: "https://arxiv.org/pdf/2403.04599" }
+    - { label: Code, href: "https://github.com/lijy373/CCLIS" }
+
+- title: "DCNet: Densely Connected Deep Convolutional Encoder Decoder Network for Nasopharyngeal Carcinoma Segmentation"
+  title_italic: "DCNet"
+  authors:
+    - { name: "Yang Li", me: true }
+    - Guanghui Han
+    - Xiujian Liu
+  venue: "Sensors 2021, 21(23), 7877"
+  year: 2021
+  type: peer-reviewed
+  teaser: { src: "/images/dcnet_teaser.jpg", kind: image }
+  links:
+    - { label: Paper, href: "https://www.mdpi.com/1424-8220/21/23/7877" }
+    - { label: Code, href: "https://github.com/yukiumi13/DCNet" }

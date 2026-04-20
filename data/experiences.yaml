@@ -1,0 +1,88 @@
+# Research and internship experiences.
+# Consumed by both src/data/experiences.ts (website) and public/assets/liyang.typ (CV).
+#
+# Fields:
+#   institution   — full institution name (also the display title on CV)
+#   institution_url — (optional) link to institution/lab
+#   group         — research group / sub-unit (shown on both)
+#   role          — position title (e.g., Research Intern, Graduate Research Assistant)
+#   location      — city, country
+#   start         — start date (free-form string: "Mar 2025")
+#   end           — end date ("Present" allowed)
+#   summary       — (website) one-line description
+#   details       — (CV) multi-line description as list; uses Markdown-ish *bold*
+#   mentor        — (CV only) { name, url } list
+#   image         — (website) small logo image for the tile
+#   highlight     — (website) optional eyebrow tag (e.g., "Stars of Tomorrow")
+#   on_web        — include on website (default true)
+#   on_cv         — include on CV      (default true)
+
+- institution: "Department of Computer Science, Rutgers University"
+  role: "Graduate Research Assistant"
+  location: "New Brunswick, NJ, US"
+  start: "Aug 2025"
+  end: "Present"
+  details:
+    - "*Parallel Reasoning for Large Language Models:* Conducting research on parallel and interactive reasoning mechanisms. We are developing frameworks that enable LLMs to perform concurrent reasoning with mutual communication, aiming to enhance both inference efficiency and accuracy."
+  mentor:
+    - { name: "Chengzhi Mao", url: "https://chengzhi-mao.github.io/" }
+  on_web: false
+
+- institution: "Tencent IEG"
+  institution_url: "https://www.lightspeed-studios.com/r&d-capabilities.html"
+  group: "LightSpeed Studios Research"
+  role: "Research Intern"
+  location: "Shenzhen, CN"
+  start: "Mar 2025"
+  end: "Present"
+  summary: "LightSpeed Studios Research, working on Large 3D Models"
+  details:
+    - "*Large Generative 3D Models:* Developing a universal 3D asset generation framework, _UltraShape 3D 1.0_, designed to seamlessly integrate with downstream game development pipelines. *Technical report with full-stack open-source is released to public to facilitate community collaboration and innovation.*"
+  mentor:
+    - { name: "Zeyu Hu",  url: "https://hzykent.github.io/" }
+    - { name: "Yuhan Wang", url: "https://johann.wang/" }
+  image: "/images/tencent_lightspeed.png"
+
+- institution: "Microsoft Research Asia"
+  institution_url: "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
+  group: "Media Computing Group"
+  role: "Research Intern"
+  location: "Beijing, CN"
+  start: "Jun 2024"
+  end: "Feb 2025"
+  summary: "Media Computing Group, working on Generalizable 3D Gaussian Splatting"
+  highlight: "Stars of Tomorrow"
+  details:
+    - "*Neural 3D Representation from Unposed Videos:* Proposed an online generalizable 3D Gaussian Splatting (3DGS) reconstruction method for monocular videos. The system transforms video streams into 3D Gaussians within seconds. This work was accepted by *ICCV 2025*."
+  mentor:
+    - { name: "Jinglu Wang", url: "https://www.microsoft.com/en-us/research/people/jinglwa/" }
+    - { name: "Xiao Li",    url: "https://pableeto.netlify.app/" }
+  image: "/images/msra-fig.png"
+
+- institution: "SmartMore"
+  institution_url: "https://alum.hkust.edu.hk/alumni-stories/alumni-kaleidoscope/3590/jiaya_jia"
+  group: "Optical Imaging Research Group"
+  role: "Research Intern"
+  location: "Shenzhen, CN"
+  start: "Jun 2022"
+  end: "May 2024"
+  summary: "Optical Imaging Research Group, working on Neural 3D Reconstruction"
+  details:
+    - "*Neural 3D Reconstruction with Polarization Cues:* Developed a low-cost and accurate multi-view 3D reconstruction pipeline specifically for reflective objects by leveraging physics-based polarization cues. This work was accepted by *ICLR 2024*."
+  mentor:
+    - { name: "Jiangbo Lu",   url: "https://sites.google.com/site/jiangbolu/" }
+    - { name: "Nianjuan Jiang", url: "https://scholar.google.com/citations?user=rW2bJ-UAAAAJ&hl=en" }
+  image: "/images/smartmore-logo.png"
+
+- institution: "Sun Yat-sen University"
+  group: "BME AI Lab"
+  role: "Research Assistant"
+  location: "Guangzhou, CN"
+  start: "Mar 2021"
+  end: "Nov 2021"
+  summary: "AI Lab, working on Biomedical Image Analysis"
+  details:
+    - "*Medical Image Segmentation:* Enhanced the accuracy of nasopharyngeal carcinoma segmentation in MRI scans to facilitate precise radiotherapy treatments. The findings were published in the journal _Sensors_."
+  mentor:
+    - { name: "Zhifan Gao" }
+  image: "/images/sysu.jpg"

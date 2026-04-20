@@ -1,0 +1,26 @@
+# Awards, honors, and scholarships.
+# Consumed by both src/data/awards.ts (website) and public/assets/liyang.typ (CV).
+
+- name: "Ph.D. Fellowship"
+  issuer: "Department of Computer Science, Rutgers University"
+  year: 2025
+
+- name: "Ph.D. Fellowship"
+  issuer: "Department of Computer Science, Dartmouth College"
+  year: 2025
+
+- name: "Stars of Tomorrow (Award of Excellent Intern)"
+  issuer: "Microsoft Research Asia"
+  year: 2025
+
+- name: "McGill & Mila Quebec Ph.D. Fellowship"
+  issuer: "McGill University"
+  year: 2024
+
+- name: "Postgraduate Scholarship"
+  issuer: "HKUST, GZ"
+  year: 2022
+
+- name: "Undergraduate Excellent Scholarship"
+  issuer: "Sun Yat-sen University"
+  year: 2019
