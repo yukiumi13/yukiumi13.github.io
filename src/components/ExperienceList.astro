@@ -1,37 +1,56 @@
 ---
 import { experiences } from '../data/experiences';
 ---
-<ul class="list-none p-0 m-0 space-y-6">
+<ol class="relative pl-6 sm:pl-8 mt-2">
+  <!-- Vertical line -->
+  <div class="absolute left-[7px] sm:left-[9px] top-2 bottom-2 w-px bg-neutral-300"></div>
+
   {experiences.map((e) => (
-    <li class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
-      <div class="lg:col-span-4 flex justify-center reveal reveal-right">
-        <div class="w-full max-w-[220px] aspect-[5/3] bg-white rounded-lg
-                    border border-neutral-200 shadow-[0_1px_2px_rgba(0,0,0,0.04)]
-                    flex items-center justify-center p-4">
-          <img src={e.image} alt={e.institution}
-               class="max-w-full max-h-full object-contain" />
-        </div>
-      </div>
-      <div class="lg:col-span-8 reveal reveal-left">
-        <div class="text-[1.15rem] font-semibold leading-snug">
+    <li class="relative pb-7 last:pb-0 reveal">
+      <!-- Dot -->
+      <div
+        class="absolute left-[2px] sm:left-1 top-[6px] w-[11px] h-[11px] rounded-full
+               bg-ust-gold ring-4 ring-[#f4f4f4]"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Header row: institution name (left) + period (right) -->
+      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+        <h3 class="text-[1.05rem] font-semibold leading-snug">
           {e.institutionUrl ? (
-            <a href={e.institutionUrl} class="text-ust-blue hover:text-ust-goldlight">
+            <a href={e.institutionUrl} class="text-ust-blue hover:text-ust-gold">
               {e.institution}
             </a>
           ) : (
             <span class="text-ust-blue">{e.institution}</span>
           )}
-        </div>
-        <div class="text-[15px] mt-1 text-neutral-700">{e.description}</div>
-        <div class="text-[14px] italic mt-1 text-neutral-600">
-          <b>
-            {e.tag && (
-              <span class="text-ust-gold">{e.tag} </span>
-            )}
-            {e.role}
-          </b>: {e.period}
+          {e.tag && (
+            <span
+              class="ml-2 inline-block align-middle text-[10px] font-semibold uppercase
+                     tracking-[0.15em] px-2 py-[3px] rounded-[2px] bg-ust-gold text-white"
+            >
+              {e.tag}
+            </span>
+          )}
+        </h3>
+        <div class="ml-auto text-[13px] text-neutral-600 whitespace-nowrap font-medium">
+          {e.period}
         </div>
       </div>
+
+      <!-- Sub: role · group -->
+      <div class="text-[14px] text-neutral-700 mt-1">
+        <span class="font-medium">{e.role}</span>
+        {e.group && <span class="text-neutral-500"> · {e.group}</span>}
+        {e.location && <span class="text-neutral-500"> · {e.location}</span>}
+      </div>
+
+      <!-- Description -->
+      {e.description && (
+        <p class="text-[14px] text-neutral-600 mt-1.5 leading-relaxed">
+          {e.description}
+        </p>
+      )}
     </li>
   ))}
-</ul>
+</ol>

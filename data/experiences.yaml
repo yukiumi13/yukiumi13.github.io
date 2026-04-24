@@ -35,7 +35,7 @@
   location: "Shenzhen, CN"
   start: "Mar 2025"
   end: "Present"
-  summary: "LightSpeed Studios Research, working on Large 3D Models"
+  summary: "Working on Large 3D Models for game asset generation."
   details:
     - "*Large Generative 3D Models:* Developing a universal 3D asset generation framework, _UltraShape 3D 1.0_, designed to seamlessly integrate with downstream game development pipelines. *Technical report with full-stack open-source is released to public to facilitate community collaboration and innovation.*"
   mentor:
@@ -50,7 +50,7 @@
   location: "Beijing, CN"
   start: "Jun 2024"
   end: "Feb 2025"
-  summary: "Media Computing Group, working on Generalizable 3D Gaussian Splatting"
+  summary: "Worked on generalizable 3D Gaussian Splatting from unposed videos."
   highlight: "Stars of Tomorrow"
   details:
     - "*Neural 3D Representation from Unposed Videos:* Proposed an online generalizable 3D Gaussian Splatting (3DGS) reconstruction method for monocular videos. The system transforms video streams into 3D Gaussians within seconds. This work was accepted by *ICCV 2025*."
@@ -66,7 +66,7 @@
   location: "Shenzhen, CN"
   start: "Jun 2022"
   end: "May 2024"
-  summary: "Optical Imaging Research Group, working on Neural 3D Reconstruction"
+  summary: "Worked on neural 3D reconstruction with polarization cues."
   details:
     - "*Neural 3D Reconstruction with Polarization Cues:* Developed a low-cost and accurate multi-view 3D reconstruction pipeline specifically for reflective objects by leveraging physics-based polarization cues. This work was accepted by *ICLR 2024*."
   mentor:
@@ -80,7 +80,7 @@
   location: "Guangzhou, CN"
   start: "Mar 2021"
   end: "Nov 2021"
-  summary: "AI Lab, working on Biomedical Image Analysis"
+  summary: "Worked on biomedical image segmentation."
   details:
     - "*Medical Image Segmentation:* Enhanced the accuracy of nasopharyngeal carcinoma segmentation in MRI scans to facilitate precise radiotherapy treatments. The findings were published in the journal _Sensors_."
   mentor:

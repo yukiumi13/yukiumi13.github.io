@@ -46,12 +46,15 @@ const utilityLinks = [
       <a
         href="#home"
         id="brand"
-        class="font-semibold tracking-tight2 transition-all duration-300 hover:text-ust-gold"
+        class="hidden md:inline-block font-semibold tracking-tight2 whitespace-nowrap
+               transition-all duration-300 hover:text-ust-gold"
         style="font-size: 18px; opacity: 0; pointer-events: none;"
       >
         Yang (Marino) LI
       </a>
-      <ul id="nav-links" class="flex gap-8 text-[13px] uppercase tracking-[0.08em] font-medium">
+      <ul id="nav-links"
+          class="flex gap-4 sm:gap-8 text-[11px] sm:text-[13px]
+                 uppercase tracking-[0.08em] font-medium">
         {mainLinks.map((l) => (
           <li>
             <a

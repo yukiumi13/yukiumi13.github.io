@@ -20,6 +20,8 @@ export interface Experience {
   image: string;
   description: string;
   role: string;
+  group?: string;
+  location?: string;
   period: string;
   tag?: string;
 }
@@ -28,9 +30,11 @@ const transform = (e: ExperienceRaw): Experience => ({
   institution: e.institution,
   institutionUrl: e.institution_url,
   image: e.image ?? '',
-  description: e.summary ?? e.group ?? '',
+  description: e.summary ?? '',
   role: e.role,
-  period: `${e.start} - ${e.end}`,
+  group: e.group,
+  location: e.location,
+  period: `${e.start} — ${e.end}`,
   tag: e.highlight,
 });
 
