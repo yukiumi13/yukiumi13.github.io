@@ -7,11 +7,14 @@ import { experiences } from '../data/experiences';
 
   {experiences.map((e) => (
     <li class="relative pb-8 last:pb-0 reveal">
-      <!-- Logo node: 44×44 white tile with 4px halo matching section bg -->
+      <!-- Logo node: 44×44 white tile with halo matching section bg.
+           Current experience gets a 2px gold border + soft glow. -->
       <div
-        class="absolute left-0 sm:left-1 top-0 w-11 h-11 rounded-md bg-white
-               border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]
-               ring-[5px] ring-[#f4f4f4] flex items-center justify-center p-1.5"
+        class={`absolute left-0 sm:left-1 top-0 w-11 h-11 rounded-md bg-white
+                ring-[5px] ring-[#f4f4f4] flex items-center justify-center p-1.5
+                ${e.current
+                  ? 'border-2 border-ust-gold shadow-[0_0_0_1px_rgba(187,140,31,0.25),0_2px_8px_rgba(187,140,31,0.18)]'
+                  : 'border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]'}`}
       >
         {e.image ? (
           <img src={e.image} alt={e.institution} class="max-w-full max-h-full object-contain" />
@@ -39,7 +42,9 @@ import { experiences } from '../data/experiences';
             </span>
           )}
         </h3>
-        <div class="ml-auto text-[13px] text-neutral-600 whitespace-nowrap font-medium">
+        <div class={`ml-auto text-[13px] whitespace-nowrap font-medium ${
+          e.current ? 'text-ust-gold' : 'text-neutral-600'
+        }`}>
           {e.period}
         </div>
       </div>

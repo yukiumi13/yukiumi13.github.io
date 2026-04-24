@@ -24,6 +24,7 @@ export interface Experience {
   location?: string;
   period: string;
   tag?: string;
+  current: boolean;
 }
 
 const transform = (e: ExperienceRaw): Experience => ({
@@ -36,6 +37,7 @@ const transform = (e: ExperienceRaw): Experience => ({
   location: e.location,
   period: `${e.start} — ${e.end}`,
   tag: e.highlight,
+  current: /present|current|ongoing/i.test(e.end),
 });
 
 export const experiences: Experience[] = (raw as ExperienceRaw[])
