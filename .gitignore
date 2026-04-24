@@ -17,3 +17,7 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+
+# Claude Code local config + NFS leftover lock files
+.claude/
+.nfs*
