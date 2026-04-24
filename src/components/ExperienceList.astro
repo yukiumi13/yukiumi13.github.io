@@ -1,19 +1,19 @@
 ---
 import { experiences } from '../data/experiences';
 ---
-<ol class="relative pl-16 sm:pl-20 mt-2">
-  <!-- Vertical line: positioned to pass through the center of logo boxes (w-11 = 44px → center 22px from left of li) -->
-  <div class="absolute left-[21px] sm:left-[25px] top-6 bottom-6 w-px bg-neutral-300 -z-0"></div>
+<ol class="relative pl-20 sm:pl-24 mt-2">
+  <!-- Vertical line: passes through the center of logo tiles (w-14 = 56px → center 28px from left of li) -->
+  <div class="absolute left-[27px] sm:left-[31px] top-7 bottom-7 w-px bg-neutral-300 -z-0"></div>
 
   {experiences.map((e) => (
     <li class="relative pb-8 last:pb-0 reveal">
-      <!-- Logo node: 44×44 white tile with halo matching section bg.
+      <!-- Logo node: 56×56 white tile with halo matching section bg.
            Current experience gets a 2px gold border + soft glow. -->
       <div
-        class={`absolute left-0 sm:left-1 top-0 w-11 h-11 rounded-md bg-white
-                ring-[5px] ring-[#f4f4f4] flex items-center justify-center p-1.5
+        class={`absolute left-0 sm:left-1 top-0 w-14 h-14 rounded-md bg-white
+                ring-[5px] ring-[#f4f4f4] flex items-center justify-center p-2
                 ${e.current
-                  ? 'border-2 border-ust-gold shadow-[0_0_0_1px_rgba(187,140,31,0.25),0_2px_8px_rgba(187,140,31,0.18)]'
+                  ? 'border-2 border-ust-gold shadow-[0_0_0_1px_rgba(187,140,31,0.25),0_2px_10px_rgba(187,140,31,0.18)]'
                   : 'border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]'}`}
       >
         {e.image ? (
