@@ -9,6 +9,9 @@ import ExperienceList from '../components/ExperienceList.astro';
 import Publication from '../components/Publication.astro';
 import { publications } from '../data/publications';
 import { awards, reviewerEntries, researchInterests } from '../data/awards';
+
+// Set at build time; updated automatically on every CI deploy.
+const lastUpdated = new Date().toLocaleString('en-US', { month: 'short', year: 'numeric' });
 ---
 
 <Layout>
@@ -127,29 +130,24 @@ import { awards, reviewerEntries, researchInterests } from '../data/awards';
           </ul>
         </Section>
 
-        <div class="mt-16 mb-10 flex flex-col items-center gap-3">
-          <div class="text-[10px] uppercase tracking-[0.22em] font-semibold text-ust-blue">
-            Visitors From Around the World
+        <footer class="mt-20 mb-6 pt-6 border-t border-neutral-200">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-[12px] text-neutral-500">
+            <div>&copy; Yang Li · {new Date().getFullYear()}</div>
+            <div class="flex items-center gap-3">
+              <a
+                href="https://clustrmaps.com/site/1pdlh"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 hover:text-ust-blue transition-colors"
+              >
+                <i class="fa-solid fa-globe text-[11px]"></i>
+                <span>Visitor map</span>
+              </a>
+              <span class="text-neutral-300">·</span>
+              <span>Last updated: {lastUpdated}</span>
+            </div>
           </div>
-          <div class="w-px h-3 bg-ust-gold"></div>
-          <a
-            href="https://clustrmaps.com/site/1pdlh"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full max-w-[260px]"
-          >
-            <img
-              src="https://clustrmaps.com/map_v2.png?d=1PdlHW3BB8bDQVmfua3IVK_jlHWLkGp97VYU-t0h8nU&cl=ffffff&w=a"
-              alt="Map of visitor locations"
-              class="w-full opacity-75 hover:opacity-100 transition-opacity duration-300"
-              loading="lazy"
-            />
-          </a>
-        </div>
-
-        <p class="text-center text-sm text-neutral-500 mt-8 mb-4">
-          &copy; Yang Li | Last updated: Nov. 2025
-        </p>
+        </footer>
       </main>
     </div>
   </div>
