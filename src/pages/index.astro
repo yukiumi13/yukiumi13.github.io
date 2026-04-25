@@ -131,12 +131,20 @@ const lastUpdated = new Date().toLocaleString('en-US', { month: 'short', year: '
         </Section>
 
         <footer class="mt-20 mb-6 pt-6 border-t border-neutral-200">
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-[12px] text-neutral-500">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-neutral-500">
             <div>&copy; Yang Li · {new Date().getFullYear()}</div>
-            <div>Last updated: {lastUpdated}</div>
+            <div class="flex items-center gap-3">
+              <img
+                src="https://hits.sh/yangmarino.li.svg?label=visitors&color=003c71&labelColor=525252&style=flat-square"
+                alt="Visitor count"
+                class="h-[18px]"
+                loading="lazy"
+              />
+              <span class="text-neutral-300">·</span>
+              <span>Last updated: {lastUpdated}</span>
+            </div>
           </div>
-          {/* Hidden 1x1 tracking pixel keeps the ClustrMaps visitor counter alive
-              even after the visible map block was removed. */}
+          {/* Keep ClustrMaps tracking pixel alive so historical visitor data continues to accumulate. */}
           <img
             src="https://clustrmaps.com/map_v2.png?d=1PdlHW3BB8bDQVmfua3IVK_jlHWLkGp97VYU-t0h8nU&cl=ffffff&w=1"
             alt=""
