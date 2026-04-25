@@ -4,19 +4,19 @@ import { experiences } from '../data/experiences';
 <ol class="relative list-none p-0 mt-2">
   <!-- Continuous vertical line through the center of the logo column -->
   <div
-    class="absolute left-[59px] sm:left-[67px] top-9 bottom-9 w-px bg-neutral-300 -z-0"
+    class="absolute left-[69px] sm:left-[77px] top-12 bottom-12 w-px bg-neutral-300 -z-0"
     aria-hidden="true"
   ></div>
 
   {experiences.map((e) => (
-    <li class="grid grid-cols-[120px_minmax(0,1fr)] sm:grid-cols-[136px_minmax(0,1fr)] gap-4 sm:gap-5 mb-9 last:mb-0 reveal">
+    <li class="grid grid-cols-[140px_minmax(0,1fr)] sm:grid-cols-[156px_minmax(0,1fr)] gap-4 sm:gap-5 mb-10 last:mb-0 reveal">
       <!-- Marker column: logo on top, date stamp below. -->
       <div class="flex flex-col items-center self-start">
         <div
-          class={`w-[72px] h-[72px] rounded-md bg-white ring-[5px] ring-[#f4f4f4]
-                  flex items-center justify-center p-2.5
+          class={`w-24 h-24 rounded-md bg-white ring-[5px] ring-[#f4f4f4]
+                  flex items-center justify-center p-3
                   ${e.current
-                    ? 'border-2 border-ust-gold shadow-[0_0_0_1px_rgba(187,140,31,0.25),0_2px_10px_rgba(187,140,31,0.18)]'
+                    ? 'border-2 border-ust-gold shadow-[0_0_0_1px_rgba(187,140,31,0.25),0_2px_12px_rgba(187,140,31,0.18)]'
                     : 'border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]'}`}
         >
           {e.image ? (
