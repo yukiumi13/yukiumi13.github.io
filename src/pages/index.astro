@@ -127,16 +127,25 @@ import { awards, reviewerEntries, researchInterests } from '../data/awards';
           </ul>
         </Section>
 
-        <p class="mt-12 text-center w-1/2 mx-auto">
-          <a href="#">
-            <script
-              is:inline
-              type="text/javascript"
-              id="clustrmaps"
-              src="//clustrmaps.com/map_v2.js?d=1PdlHW3BB8bDQVmfua3IVK_jlHWLkGp97VYU-t0h8nU&cl=ffffff&w=a"
-            ></script>
+        <div class="mt-16 mb-10 flex flex-col items-center gap-3">
+          <div class="text-[10px] uppercase tracking-[0.22em] font-semibold text-ust-blue">
+            Visitors From Around the World
+          </div>
+          <div class="w-px h-3 bg-ust-gold"></div>
+          <a
+            href="https://clustrmaps.com/site/1pdlh"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full max-w-[260px]"
+          >
+            <img
+              src="https://clustrmaps.com/map_v2.png?d=1PdlHW3BB8bDQVmfua3IVK_jlHWLkGp97VYU-t0h8nU&cl=ffffff&w=a"
+              alt="Map of visitor locations"
+              class="w-full opacity-75 hover:opacity-100 transition-opacity duration-300"
+              loading="lazy"
+            />
           </a>
-        </p>
+        </div>
 
         <p class="text-center text-sm text-neutral-500 mt-8 mb-4">
           &copy; Yang Li | Last updated: Nov. 2025
