@@ -1,0 +1,22 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  current?: boolean;
+  imageClass?: string;
+  size?: 'sm' | 'md';
+}
+const { src, alt, current = false, imageClass, size = 'md' } = Astro.props;
+
+const tileSize = size === 'sm'
+  ? 'w-[24px] h-[24px]'
+  : 'w-[48px] h-[48px] sm:w-[64px] sm:h-[64px]';
+const padding = size === 'sm' ? 'p-0.5' : 'p-1 sm:p-1.5';
+---
+<div class:list={[
+  tileSize, padding,
+  'flex items-center justify-center bg-white rounded-full',
+  current && 'ring-[5px] ring-[#f4f4f4] border-2 border-ust-gold shadow-[0_0_0_1px_rgba(187,140,31,0.25),0_2px_12px_rgba(187,140,31,0.18)]',
+]}>
+  <img src={src} alt={alt} class={imageClass ?? 'max-w-full max-h-full object-contain'} />
+</div>

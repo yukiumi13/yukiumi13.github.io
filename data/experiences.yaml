@@ -17,6 +17,20 @@
 #   on_web        — include on website (default true)
 #   on_cv         — include on CV      (default true)
 
+- institution: "Google DeepMind"
+  institution_url: "https://deepmind.google/"
+  group: "Gemini Team"
+  role: "Student Researcher"
+  location: "New York, NY, US"
+  start: "Jun 2026"
+  end: "Present"
+  summary: "Working on searching agent orchestration."
+  details:
+    - "*Multimodal Searching Agent Orchestration:* Building a multimodal searching agent system for the Gemini model family."
+  mentor:
+    - { name: "Guangxin Han" }
+  image: "/images/deepmind-icon.svg"
+
 - institution: "Department of Computer Science, Rutgers University"
   role: "Graduate Research Assistant"
   location: "New Brunswick, NJ, US"
@@ -34,14 +48,14 @@
   role: "Research Intern"
   location: "Shenzhen, CN"
   start: "Mar 2025"
-  end: "Present"
+  end: "Sep 2025"
   summary: "Working on Large 3D Models for game asset generation."
   details:
     - "*Large Generative 3D Models:* Developing a universal 3D asset generation framework, _UltraShape 3D 1.0_, designed to seamlessly integrate with downstream game development pipelines. *Technical report with full-stack open-source is released to public to facilitate community collaboration and innovation.*"
   mentor:
     - { name: "Zeyu Hu",  url: "https://hzykent.github.io/" }
     - { name: "Yuhan Wang", url: "https://johann.wang/" }
-  image: "/images/tencent_lightspeed.png"
+  image: "/images/lightspeed-icon.svg"
 
 - institution: "Microsoft Research Asia"
   institution_url: "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
@@ -57,7 +71,8 @@
   mentor:
     - { name: "Jinglu Wang", url: "https://www.microsoft.com/en-us/research/people/jinglwa/" }
     - { name: "Xiao Li",    url: "https://pableeto.netlify.app/" }
-  image: "/images/msra-fig.png"
+  image: "/images/microsoft-icon.svg"
+  image_class: "w-3/5 h-3/5 object-contain"
 
 - institution: "SmartMore"
   institution_url: "https://alum.hkust.edu.hk/alumni-stories/alumni-kaleidoscope/3590/jiaya_jia"
@@ -72,7 +87,7 @@
   mentor:
     - { name: "Jiangbo Lu",   url: "https://sites.google.com/site/jiangbolu/" }
     - { name: "Nianjuan Jiang", url: "https://scholar.google.com/citations?user=rW2bJ-UAAAAJ&hl=en" }
-  image: "/images/smartmore-logo.png"
+  image: "/images/smartmore-icon.png"
 
 - institution: "Sun Yat-sen University"
   group: "BME AI Lab"
@@ -85,4 +100,4 @@
     - "*Medical Image Segmentation:* Enhanced the accuracy of nasopharyngeal carcinoma segmentation in MRI scans to facilitate precise radiotherapy treatments. The findings were published in the journal _Sensors_."
   mentor:
     - { name: "Zhifan Gao" }
-  image: "/images/sysu.jpg"
+  image: "/images/sysu-icon.png"

@@ -11,6 +11,8 @@ interface ExperienceRaw {
   summary?: string;
   highlight?: string;
   image?: string;
+  image_class?: string;
+  logo_tile_class?: string;
   on_web?: boolean;
 }
 
@@ -18,6 +20,8 @@ export interface Experience {
   institution: string;
   institutionUrl?: string;
   image: string;
+  imageClass?: string;
+  logoTileClass?: string;
   description: string;
   role: string;
   group?: string;
@@ -31,6 +35,8 @@ const transform = (e: ExperienceRaw): Experience => ({
   institution: e.institution,
   institutionUrl: e.institution_url,
   image: e.image ?? '',
+  imageClass: e.image_class,
+  logoTileClass: e.logo_tile_class,
   description: e.summary ?? '',
   role: e.role,
   group: e.group,
