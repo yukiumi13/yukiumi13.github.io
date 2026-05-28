@@ -46,11 +46,16 @@ const utilityLinks = [
       <a
         href="#home"
         id="brand"
-        class="hidden md:inline-block font-semibold tracking-tight2 whitespace-nowrap
-               transition-all duration-300 hover:text-ust-gold"
-        style="font-size: 18px; opacity: 0; pointer-events: none;"
+        aria-label="Home"
+        class="hidden md:inline-flex items-center transition-all duration-300 hover:opacity-80"
+        style="opacity: 0; pointer-events: none;"
       >
-        Yang (Marino) LI
+        <img
+          src="/images/rutgers-shield-blue.png"
+          alt="Rutgers"
+          class="w-auto"
+          style="height: 34px;"
+        />
       </a>
       <ul id="nav-links"
           class="flex gap-4 sm:gap-8 text-[11px] sm:text-[13px]
@@ -91,9 +96,6 @@ const utilityLinks = [
       nav.style.webkitBackdropFilter = scrolled ? 'blur(10px)' : 'none';
       nav.style.boxShadow = scrolled ? '0 1px 0 0 rgba(187,140,31,0.35)' : 'none';
       inner.style.height = scrolled ? '56px' : '72px';
-      brand.style.fontSize = scrolled ? '16px' : '18px';
-      // HKUST .header / .header.white pattern: invert text over dark hero
-      brand.style.color = scrolled ? 'rgb(0,60,113)' : '#ffffff';
       brand.style.opacity = scrolled ? '1' : '0';
       brand.style.pointerEvents = scrolled ? 'auto' : 'none';
       if (links) links.style.color = scrolled ? 'rgb(38,38,38)' : 'rgba(255,255,255,0.92)';

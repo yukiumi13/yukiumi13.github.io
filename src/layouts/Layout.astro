@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Statcounter from '@statcounter/astro';
 
 interface Props {
   title?: string;
@@ -18,11 +19,6 @@ const { title = "Yang (Marino) LI's Homepage" } = Astro.props;
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
     <title>{title}</title>
-    <!-- GoatCounter analytics -->
-    <script
-      data-goatcounter="https://yangmarinoli.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     <slot />
@@ -40,5 +36,6 @@ const { title = "Yang (Marino) LI's Homepage" } = Astro.props;
       );
       document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
     </script>
+    <Statcounter sc_project={13260812} sc_security="b2610912" />
   </body>
 </html>

@@ -1,31 +1,23 @@
 ---
-// Slim HKUST-blue banner with the official Rutgers (white/reversed) signature.
-// Identity (name / title / links) lives in the Sidebar; this band carries the
-// current-institution mark for a clean, low-key header.
+// Slim HKUST-blue banner carrying the Rutgers shield crest (reversed/white).
+// Identity (name / title / links) lives in the Sidebar; this band just holds
+// the current-institution mark for a clean, low-key header.
 ---
 <section
   class="relative w-full overflow-hidden bg-ust-blue"
   style="height: min(34vh, 260px); margin-top: -108px;"
 >
-  <!-- Subtle gold diagonal ambient (very faint, just breaks flatness) -->
-  <div
-    class="absolute inset-0 pointer-events-none opacity-30"
-    style="background-image:
-      radial-gradient(circle at 85% 15%, rgba(187,140,31,0.22) 0%, transparent 45%),
-      linear-gradient(135deg, transparent 60%, rgba(212,163,41,0.10) 85%, transparent 100%);"
-  ></div>
-
   <!-- HKUST brand gold accents -->
   <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-ust-gold"></div>
   <div class="absolute right-0 bottom-0 h-[3px] w-1/3 bg-ust-gold"></div>
 
-  <!-- Content: official Rutgers reversed (white) signature -->
-  <div class="relative h-full max-w-container mx-auto px-5 flex flex-col justify-end pb-10 pt-32">
+  <!-- Content: Rutgers shield crest, reversed (white) -->
+  <div class="relative h-full max-w-container mx-auto px-5 flex flex-col justify-end pb-9 pt-28">
     <img
-      src="/images/rutgers-signature-white.svg"
-      alt="Rutgers University–New Brunswick, School of Arts and Sciences, Department of Computer Science"
-      class="w-auto"
-      style="height: clamp(52px, 8vw, 78px);"
+      src="/images/rutgers-shield-white.png"
+      alt="Rutgers University shield"
+      class="w-auto self-start"
+      style="height: clamp(52px, 8vw, 72px);"
     />
   </div>
 </section>
