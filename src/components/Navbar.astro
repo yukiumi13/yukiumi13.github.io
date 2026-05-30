@@ -7,32 +7,11 @@ const mainLinks = [
   { href: '#experiences', label: 'Experience' },
   { href: cvHref, label: 'CV' },
 ];
-
-const utilityLinks = [
-  { href: 'mailto:yang.marino.li@gmail.com', label: 'Email' },
-  { href: 'https://scholar.google.com/citations?user=kqrSHAYAAAAJ&hl=zh-CN', label: 'Scholar' },
-  { href: 'https://github.com/yukiumi13', label: 'GitHub' },
-];
 ---
 <header
   id="site-header"
   class="fixed top-0 left-0 right-0 z-40 transition-all duration-300"
 >
-  <!-- Top utility strip (HKUST "quick-menu") — hides on scroll -->
-  <div
-    id="utility-strip"
-    class="bg-ust-blue text-white/90 text-[12px] overflow-hidden transition-all duration-300"
-    style="max-height: 40px;"
-  >
-    <div class="max-w-container mx-auto px-5 h-9 flex items-center justify-end gap-5">
-      {utilityLinks.map((l) => (
-        <a href={l.href} class="hover:text-ust-gold transition-colors tracking-wide">
-          {l.label}
-        </a>
-      ))}
-    </div>
-  </div>
-
   <!-- Main navigation — transparent at top, frosted white on scroll -->
   <nav
     id="main-nav"
@@ -41,7 +20,7 @@ const utilityLinks = [
     <div
       id="main-nav-inner"
       class="max-w-container mx-auto px-5 flex items-center justify-between transition-all duration-300"
-      style="height: 72px;"
+      style="height: 88px;"
     >
       <a
         href="#home"
@@ -80,22 +59,19 @@ const utilityLinks = [
 
 <script is:inline>
   (() => {
-    const utility = document.getElementById('utility-strip');
     const nav = document.getElementById('main-nav');
     const inner = document.getElementById('main-nav-inner');
     const brand = document.getElementById('brand');
-    if (!utility || !nav || !inner || !brand) return;
+    if (!nav || !inner || !brand) return;
     const links = document.getElementById('nav-links');
     const onScroll = () => {
       const scrolled = window.scrollY > 30;
-      // HKUST: utility hides; main nav: #ffffff80 + blur(10px); logo shrinks
-      utility.style.maxHeight = scrolled ? '0px' : '40px';
-      utility.style.opacity = scrolled ? '0' : '1';
+      // Main nav: transparent at top → #ffffff80 + blur(10px) on scroll; logo fades in
       nav.style.backgroundColor = scrolled ? 'rgba(255,255,255,0.5)' : 'transparent';
       nav.style.backdropFilter = scrolled ? 'blur(10px)' : 'none';
       nav.style.webkitBackdropFilter = scrolled ? 'blur(10px)' : 'none';
       nav.style.boxShadow = scrolled ? '0 1px 0 0 rgba(187,140,31,0.35)' : 'none';
-      inner.style.height = scrolled ? '56px' : '72px';
+      inner.style.height = scrolled ? '56px' : '88px';
       brand.style.opacity = scrolled ? '1' : '0';
       brand.style.pointerEvents = scrolled ? 'auto' : 'none';
       if (links) links.style.color = scrolled ? 'rgb(38,38,38)' : 'rgba(255,255,255,0.92)';

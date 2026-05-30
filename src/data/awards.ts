@@ -16,17 +16,27 @@ export const awards: Award[] = (raw as AwardRaw[]).map((a) => ({
   year: String(a.year),
 }));
 
-export interface ReviewerEntry {
-  venue: string;
-  years: string;
+// All venues currently share the same reviewing years, so factor the years
+// out instead of repeating them per row.
+export const reviewerVenues: string[] = [
+  'NeurIPS',
+  'ICLR',
+  'CVPR',
+  'AISTATS',
+  'ICML',
+];
+
+export const reviewerYears = '2025–2026';
+
+export interface TeachingEntry {
+  code: string;
+  title: string;
+  term: string;
 }
 
-export const reviewerEntries: ReviewerEntry[] = [
-  { venue: 'NeurIPS', years: "25', 26'" },
-  { venue: 'ICLR', years: "25', 26'" },
-  { venue: 'CVPR', years: "25', 26'" },
-  { venue: 'AISTATS', years: "25', 26'" },
-  { venue: 'ICML', years: "25', 26'" },
+export const teachingEntries: TeachingEntry[] = [
+  { code: 'CS 439', title: 'Introduction to Data Science', term: 'Spring 2026' },
+  { code: 'CS 205', title: 'Discrete Mathematics', term: 'Fall 2025' },
 ];
 
 export const researchInterests: string[] = [
