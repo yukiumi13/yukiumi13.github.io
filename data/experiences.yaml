@@ -37,7 +37,7 @@
   start: "Aug 2025"
   end: "Present"
   details:
-    - "*Parallel Reasoning for Large Language Models:* Conducting research on parallel and interactive reasoning mechanisms. We are developing frameworks that enable LLMs to perform concurrent reasoning with mutual communication, aiming to enhance both inference efficiency and accuracy."
+    - "*Latent-Space Reasoning in Multimodal Foundation Models:* Studying how continuous internal representations support search, parallel reasoning, and 3D/spatial understanding."
   mentor:
     - { name: "Chengzhi Mao", url: "https://chengzhi-mao.github.io/" }
   on_web: false

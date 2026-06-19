@@ -39,7 +39,5 @@ export const teachingEntries: TeachingEntry[] = [
   { code: 'CS 205', title: 'Discrete Mathematics', term: 'Fall 2025' },
 ];
 
-export const researchInterests: string[] = [
-  'Generative 3D Vision',
-  'Large Language Models for Vision',
-];
+export const researchStatement =
+  'I study latent-space reasoning in multimodal foundation models, especially for search, parallel reasoning, and 3D/spatial understanding.';
