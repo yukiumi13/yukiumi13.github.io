@@ -24,9 +24,9 @@
   location: "New York, NY, US"
   start: "Jun 2026"
   end: "Present"
-  summary: "Working on searching agent orchestration."
+  summary: "Working on latent language models for long-horizon agents."
   details:
-    - "*Multimodal Searching Agent Orchestration:* Building a multimodal searching agent system for the Gemini model family."
+    - "*Latent Language Models for Long-Horizon Agents:* Developing latent language modeling methods for long-horizon agentic reasoning and planning."
   mentor:
     - { name: "Guangxin Han" }
   image: "/images/deepmind-icon.svg"
