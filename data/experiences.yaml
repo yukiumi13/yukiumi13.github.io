@@ -12,6 +12,7 @@
 #   summary       — (website) one-line description
 #   details       — (CV) multi-line description as list; uses Markdown-ish *bold*
 #   mentor        — (CV only) { name, url } list
+#   mentor_label  — (CV only) optional relationship label (default: "Mentor")
 #   image         — (website) small logo image for the tile
 #   highlight     — (website) optional eyebrow tag (e.g., "Stars of Tomorrow")
 #   on_web        — include on website (default true)
@@ -28,7 +29,9 @@
   details:
     - "*Latent Language Models for Long-Horizon Agents:* Developing latent language modeling methods for long-horizon agentic reasoning and planning."
   mentor:
-    - { name: "Guangxin Han" }
+    - { name: "Guangxing Han", url: "https://guangxinghan.github.io/" }
+    - { name: "Saurabh Kumar", url: "https://szk9876.github.io/" }
+  mentor_label: "Hosts"
   image: "/images/deepmind-icon.svg"
 
 - institution: "Department of Computer Science, Rutgers University"

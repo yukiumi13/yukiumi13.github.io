@@ -107,7 +107,7 @@
   )
   for d in e.at("details", default: ()) [ - #md-inline(d) ]
   if "mentor" in e and e.mentor.len() > 0 [
-    - Mentor: #mentor-line(e.mentor)
+    - #e.at("mentor_label", default: "Mentor"): #mentor-line(e.mentor)
   ]
   parbreak()
 }
