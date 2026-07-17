@@ -47,7 +47,7 @@
 )
 
 // Personal info
-#let name = "Yang(Marino) Li"
+#let name = "Yang Li"
 #let email = "yang.marino.li@gmail.com"
 #let github = "github.com/yukiumi13"
 #let linkedin = ""

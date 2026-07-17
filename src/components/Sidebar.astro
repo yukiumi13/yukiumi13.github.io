@@ -14,9 +14,12 @@ import { profile } from '../data/profile';
       </p>
     </div>
 
-    <h1 class="mt-6 mb-4 text-ust-blue font-light text-[2rem] leading-tight tracking-tight2">
-      {profile.name} <i class="font-normal">({profile.nickname})</i> {profile.surname}
+    <h1 class="mt-6 mb-1 text-ust-blue font-light text-[2rem] leading-tight tracking-tight2">
+      {profile.name} {profile.surname}
     </h1>
+    <p class="mb-4 text-[15px] leading-snug text-neutral-500">
+      {profile.nickname}
+    </p>
 
     <p class="text-[15px] leading-relaxed">
       <b>{profile.title}</b><br />

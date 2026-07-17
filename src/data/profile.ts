@@ -5,7 +5,7 @@ export const cvHref = `/assets/liyang.pdf?v=${buildVersion}`;
 export const profile = {
   name: 'Yang',
   nickname: 'Marino',
-  surname: 'LI',
+  surname: 'Li',
   title: 'PhD Student',
   affiliation: [
     'Department of Computer Science,',

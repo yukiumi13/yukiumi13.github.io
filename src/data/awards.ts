@@ -40,4 +40,4 @@ export const teachingEntries: TeachingEntry[] = [
 ];
 
 export const researchStatement =
-  'I study latent-space reasoning in multimodal foundation models, especially for search, parallel reasoning, and 3D/spatial understanding.';
+  'I study latent representations in multimodal foundation models.';

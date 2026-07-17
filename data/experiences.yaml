@@ -40,7 +40,7 @@
   start: "Aug 2025"
   end: "Present"
   details:
-    - "*Latent-Space Reasoning in Multimodal Foundation Models:* Studying how continuous internal representations support search, parallel reasoning, and 3D/spatial understanding."
+    - "*Latent Representations in Multimodal Foundation Models:* Studying how latent representations emerge and shape model behavior."
   mentor:
     - { name: "Chengzhi Mao", url: "https://chengzhi-mao.github.io/" }
   on_web: false
