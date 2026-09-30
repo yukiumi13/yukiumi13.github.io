@@ -2,6 +2,22 @@
 # Consumed by both src/data/publications.ts (website) and public/assets/liyang.typ (CV).
 # Order: newest first (chronological). CV still filters preprint vs peer-reviewed.
 
+- title: "Next Thoughts Are Distributions: Generative Autoregressive Reasoning in the Latent Space"
+  authors:
+    - { name: "Yang Li", me: true }
+    - Yi Wang
+    - Shiyuan Huang
+    - Yang Liu
+    - Hao Wang
+    - Chengzhi Mao
+  venue: "arXiv:2609.33271"
+  year: 2026
+  type: preprint
+  badge: { text: "Arxiv 2026", kind: arxiv }
+  teaser: { src: "/images/atf_teaser.png", kind: image, fit: contain }
+  links:
+    - { label: Paper, href: "https://arxiv.org/pdf/2609.33271v1" }
+
 - title: "LACE: Lattice Attention for Cross-thread Exploration"
   title_italic: "LACE"
   authors:
@@ -13,7 +29,7 @@
   year: 2026
   type: preprint
   badge: { text: "Arxiv 2026", kind: arxiv }
-  teaser: { src: "/images/lace_teaser.svg", kind: image, fit: cover, pos: "bottom" }
+  teaser: { src: "/images/lace_figure1_v3.png", kind: image, fit: contain }
   links:
     - { label: Paper, href: "https://arxiv.org/pdf/2604.15529" }
 
