@@ -14,7 +14,7 @@
   year: 2026
   type: preprint
   badge: { text: "Arxiv 2026", kind: arxiv }
-  teaser: { src: "/images/atf_teaser.png", kind: image, fit: contain }
+  teaser: { src: "/images/atf_teaser.png", kind: image, fit: cover, pos: "right" }
   links:
     - { label: Paper, href: "https://arxiv.org/pdf/2609.33271v1" }
 
@@ -29,7 +29,7 @@
   year: 2026
   type: preprint
   badge: { text: "Arxiv 2026", kind: arxiv }
-  teaser: { src: "/images/lace_figure1_v3.png", kind: image, fit: contain }
+  teaser: { src: "/images/lace_figure1b_v3.png", kind: image, fit: cover, pos: "top" }
   links:
     - { label: Paper, href: "https://arxiv.org/pdf/2604.15529" }
 
